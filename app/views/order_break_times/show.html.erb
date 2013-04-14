@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order no:</strong>
+  <%= @order_break_time.order_no %>
+</p>
+
+<p>
+  <strong>Detail no:</strong>
+  <%= @order_break_time.detail_no %>
+</p>
+
+<p>
+  <strong>Break time:</strong>
+  <%= @order_break_time.break_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_break_time_path(@order_break_time) %> |
+<%= link_to 'Back', order_break_times_path %>

@@ -1,0 +1,1 @@
+json.extract! @order_info, :order_no, :department_cd, :author, :revenue_unit_code, :project_cd, :business_cd, :contract_start_date, :contract_end_date, :work_place, :income_date, :payment_site, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :general_other, :created_at, :updated_at

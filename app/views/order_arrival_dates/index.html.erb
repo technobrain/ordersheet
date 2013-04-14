@@ -1,0 +1,31 @@
+<h1>Listing order_arrival_dates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order no</th>
+      <th>Detail no</th>
+      <th>Arrival date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_arrival_dates.each do |order_arrival_date| %>
+    <tr>
+      <td><%= order_arrival_date.order_no %></td>
+      <td><%= order_arrival_date.detail_no %></td>
+      <td><%= order_arrival_date.arrival_date %></td>
+      <td><%= link_to 'Show', order_arrival_date %></td>
+      <td><%= link_to 'Edit', edit_order_arrival_date_path(order_arrival_date) %></td>
+      <td><%= link_to 'Destroy', order_arrival_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Order arrival date', new_order_arrival_date_path %>

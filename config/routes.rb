@@ -1,4 +1,24 @@
 Ordersheet::Application.routes.draw do
+  resources :payment_site_masters
+
+  resources :order_arrival_dates
+
+  resources :order_break_times
+
+  resources :order_charge_people
+
+  resources :order_infos
+
+  resources :business_masters
+
+  resources :project_masters
+
+  resources :company_masters
+
+  resources :employee_masters
+
+  resources :ordersheetrails
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

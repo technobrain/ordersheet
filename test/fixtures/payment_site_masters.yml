@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  payment_site_code: 1
+  payment_site_name: MyString
+
+two:
+  payment_site_code: 1
+  payment_site_name: MyString

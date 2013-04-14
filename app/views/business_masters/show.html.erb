@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project cd:</strong>
+  <%= @business_master.project_cd %>
+</p>
+
+<p>
+  <strong>Business cd:</strong>
+  <%= @business_master.business_cd %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @business_master.business_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_master_path(@business_master) %> |
+<%= link_to 'Back', business_masters_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company cd:</strong>
+  <%= @company_master.company_cd %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @company_master.company_name %>
+</p>
+
+<p>
+  <strong>Division name:</strong>
+  <%= @company_master.division_name %>
+</p>
+
+<p>
+  <strong>Charge person:</strong>
+  <%= @company_master.charge_person %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @company_master.contact %>
+</p>
+
+<p>
+  <strong>Tel no:</strong>
+  <%= @company_master.tel_no %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_master_path(@company_master) %> |
+<%= link_to 'Back', company_masters_path %>

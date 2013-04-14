@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_cd: 1
+  project_name: MyString
+
+two:
+  project_cd: 1
+  project_name: MyString

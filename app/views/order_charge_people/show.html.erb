@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order no:</strong>
+  <%= @order_charge_person.order_no %>
+</p>
+
+<p>
+  <strong>Employee cd:</strong>
+  <%= @order_charge_person.employee_cd %>
+</p>
+
+<p>
+  <strong>Basic amount:</strong>
+  <%= @order_charge_person.basic_amount %>
+</p>
+
+<p>
+  <strong>Time limit lower:</strong>
+  <%= @order_charge_person.time_limit_lower %>
+</p>
+
+<p>
+  <strong>Time limit upper:</strong>
+  <%= @order_charge_person.time_limit_upper %>
+</p>
+
+<p>
+  <strong>Deduction bid:</strong>
+  <%= @order_charge_person.deduction_bid %>
+</p>
+
+<p>
+  <strong>Overtime bid:</strong>
+  <%= @order_charge_person.overtime_bid %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_charge_person_path(@order_charge_person) %> |
+<%= link_to 'Back', order_charge_people_path %>

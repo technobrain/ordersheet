@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order no:</strong>
+  <%= @order_arrival_date.order_no %>
+</p>
+
+<p>
+  <strong>Detail no:</strong>
+  <%= @order_arrival_date.detail_no %>
+</p>
+
+<p>
+  <strong>Arrival date:</strong>
+  <%= @order_arrival_date.arrival_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_arrival_date_path(@order_arrival_date) %> |
+<%= link_to 'Back', order_arrival_dates_path %>

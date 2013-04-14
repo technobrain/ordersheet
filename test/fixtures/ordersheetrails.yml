@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  g: MyString
+  scaffold: MyString
+  ordersheet: MyString
+  company_cd: 1
+  reg_date: 2013-04-14
+  mod_date: 2013-04-14
+  company_name: MyString
+  string: MyString
+  division_name: MyString
+  charge_person: MyString
+  contact: MyString
+  tel_no: MyString
+
+two:
+  g: MyString
+  scaffold: MyString
+  ordersheet: MyString
+  company_cd: 1
+  reg_date: 2013-04-14
+  mod_date: 2013-04-14
+  company_name: MyString
+  string: MyString
+  division_name: MyString
+  charge_person: MyString
+  contact: MyString
+  tel_no: MyString

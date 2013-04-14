@@ -1,0 +1,39 @@
+<h1>Listing order_charge_people</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order no</th>
+      <th>Employee cd</th>
+      <th>Basic amount</th>
+      <th>Time limit lower</th>
+      <th>Time limit upper</th>
+      <th>Deduction bid</th>
+      <th>Overtime bid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_charge_people.each do |order_charge_person| %>
+    <tr>
+      <td><%= order_charge_person.order_no %></td>
+      <td><%= order_charge_person.employee_cd %></td>
+      <td><%= order_charge_person.basic_amount %></td>
+      <td><%= order_charge_person.time_limit_lower %></td>
+      <td><%= order_charge_person.time_limit_upper %></td>
+      <td><%= order_charge_person.deduction_bid %></td>
+      <td><%= order_charge_person.overtime_bid %></td>
+      <td><%= link_to 'Show', order_charge_person %></td>
+      <td><%= link_to 'Edit', edit_order_charge_person_path(order_charge_person) %></td>
+      <td><%= link_to 'Destroy', order_charge_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Order charge person', new_order_charge_person_path %>

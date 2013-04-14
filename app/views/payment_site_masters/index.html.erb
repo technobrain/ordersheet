@@ -1,0 +1,29 @@
+<h1>Listing payment_site_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Payment site code</th>
+      <th>Payment site name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_site_masters.each do |payment_site_master| %>
+    <tr>
+      <td><%= payment_site_master.payment_site_code %></td>
+      <td><%= payment_site_master.payment_site_name %></td>
+      <td><%= link_to 'Show', payment_site_master %></td>
+      <td><%= link_to 'Edit', edit_payment_site_master_path(payment_site_master) %></td>
+      <td><%= link_to 'Destroy', payment_site_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Payment site master', new_payment_site_master_path %>

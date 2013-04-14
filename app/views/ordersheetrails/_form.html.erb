@@ -1,0 +1,65 @@
+<%= form_for(@ordersheetrail) do |f| %>
+  <% if @ordersheetrail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ordersheetrail.errors.count, "error") %> prohibited this ordersheetrail from being saved:</h2>
+
+      <ul>
+      <% @ordersheetrail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :g %><br />
+    <%= f.text_field :g %>
+  </div>
+  <div class="field">
+    <%= f.label :scaffold %><br />
+    <%= f.text_field :scaffold %>
+  </div>
+  <div class="field">
+    <%= f.label :ordersheet %><br />
+    <%= f.text_field :ordersheet %>
+  </div>
+  <div class="field">
+    <%= f.label :company_cd %><br />
+    <%= f.number_field :company_cd %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_date %><br />
+    <%= f.date_select :reg_date %>
+  </div>
+  <div class="field">
+    <%= f.label :mod_date %><br />
+    <%= f.date_select :mod_date %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br />
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :division_name %><br />
+    <%= f.text_field :division_name %>
+  </div>
+  <div class="field">
+    <%= f.label :charge_person %><br />
+    <%= f.text_field :charge_person %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_no %><br />
+    <%= f.text_field :tel_no %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

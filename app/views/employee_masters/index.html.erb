@@ -1,0 +1,65 @@
+<h1>Listing employee_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee cd</th>
+      <th>Employee name</th>
+      <th>Employee name kana</th>
+      <th>Position cd</th>
+      <th>Unit cd</th>
+      <th>Email address1</th>
+      <th>Emai address2</th>
+      <th>Postal cd</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Tel no</th>
+      <th>Fax no</th>
+      <th>Mobile tel no1</th>
+      <th>Mobile tel no2</th>
+      <th>Emergency tel no</th>
+      <th>Birth date</th>
+      <th>Station</th>
+      <th>Birth place</th>
+      <th>Education level</th>
+      <th>Other</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employee_masters.each do |employee_master| %>
+    <tr>
+      <td><%= employee_master.employee_cd %></td>
+      <td><%= employee_master.employee_name %></td>
+      <td><%= employee_master.employee_name_kana %></td>
+      <td><%= employee_master.position_cd %></td>
+      <td><%= employee_master.unit_cd %></td>
+      <td><%= employee_master.email_address1 %></td>
+      <td><%= employee_master.emai_address2 %></td>
+      <td><%= employee_master.postal_cd %></td>
+      <td><%= employee_master.address1 %></td>
+      <td><%= employee_master.address2 %></td>
+      <td><%= employee_master.tel_no %></td>
+      <td><%= employee_master.fax_no %></td>
+      <td><%= employee_master.mobile_tel_no1 %></td>
+      <td><%= employee_master.mobile_tel_no2 %></td>
+      <td><%= employee_master.emergency_tel_no %></td>
+      <td><%= employee_master.birth_date %></td>
+      <td><%= employee_master.station %></td>
+      <td><%= employee_master.birth_place %></td>
+      <td><%= employee_master.education_level %></td>
+      <td><%= employee_master.other %></td>
+      <td><%= link_to 'Show', employee_master %></td>
+      <td><%= link_to 'Edit', edit_employee_master_path(employee_master) %></td>
+      <td><%= link_to 'Destroy', employee_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Employee master', new_employee_master_path %>

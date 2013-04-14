@@ -1,0 +1,29 @@
+<%= form_for(@order_break_time) do |f| %>
+  <% if @order_break_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_break_time.errors.count, "error") %> prohibited this order_break_time from being saved:</h2>
+
+      <ul>
+      <% @order_break_time.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_no %><br />
+    <%= f.number_field :order_no %>
+  </div>
+  <div class="field">
+    <%= f.label :detail_no %><br />
+    <%= f.number_field :detail_no %>
+  </div>
+  <div class="field">
+    <%= f.label :break_time %><br />
+    <%= f.time_select :break_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

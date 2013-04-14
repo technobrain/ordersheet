@@ -1,0 +1,37 @@
+<h1>Listing company_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company cd</th>
+      <th>Company name</th>
+      <th>Division name</th>
+      <th>Charge person</th>
+      <th>Contact</th>
+      <th>Tel no</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company_masters.each do |company_master| %>
+    <tr>
+      <td><%= company_master.company_cd %></td>
+      <td><%= company_master.company_name %></td>
+      <td><%= company_master.division_name %></td>
+      <td><%= company_master.charge_person %></td>
+      <td><%= company_master.contact %></td>
+      <td><%= company_master.tel_no %></td>
+      <td><%= link_to 'Show', company_master %></td>
+      <td><%= link_to 'Edit', edit_company_master_path(company_master) %></td>
+      <td><%= link_to 'Destroy', company_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Company master', new_company_master_path %>

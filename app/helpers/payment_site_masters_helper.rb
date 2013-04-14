@@ -1,0 +1,2 @@
+module PaymentSiteMastersHelper
+end

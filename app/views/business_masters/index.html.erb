@@ -1,0 +1,31 @@
+<h1>Listing business_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project cd</th>
+      <th>Business cd</th>
+      <th>Business name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_masters.each do |business_master| %>
+    <tr>
+      <td><%= business_master.project_cd %></td>
+      <td><%= business_master.business_cd %></td>
+      <td><%= business_master.business_name %></td>
+      <td><%= link_to 'Show', business_master %></td>
+      <td><%= link_to 'Edit', edit_business_master_path(business_master) %></td>
+      <td><%= link_to 'Destroy', business_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Business master', new_business_master_path %>

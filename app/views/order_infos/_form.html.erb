@@ -1,0 +1,89 @@
+<%= form_for(@order_info) do |f| %>
+  <% if @order_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_info.errors.count, "error") %> prohibited this order_info from being saved:</h2>
+
+      <ul>
+      <% @order_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_no %><br />
+    <%= f.number_field :order_no %>
+  </div>
+  <div class="field">
+    <%= f.label :department_cd %><br />
+    <%= f.number_field :department_cd %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_unit_code %><br />
+    <%= f.number_field :revenue_unit_code %>
+  </div>
+  <div class="field">
+    <%= f.label :project_cd %><br />
+    <%= f.number_field :project_cd %>
+  </div>
+  <div class="field">
+    <%= f.label :business_cd %><br />
+    <%= f.number_field :business_cd %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_start_date %><br />
+    <%= f.date_select :contract_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_end_date %><br />
+    <%= f.date_select :contract_end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :work_place %><br />
+    <%= f.text_field :work_place %>
+  </div>
+  <div class="field">
+    <%= f.label :income_date %><br />
+    <%= f.date_select :income_date %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_site %><br />
+    <%= f.number_field :payment_site %>
+  </div>
+  <div class="field">
+    <%= f.label :work_start_date %><br />
+    <%= f.time_select :work_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :work_end_date %><br />
+    <%= f.time_select :work_end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br />
+    <%= f.text_area :other %>
+  </div>
+  <div class="field">
+    <%= f.label :general_receipt_date %><br />
+    <%= f.date_select :general_receipt_date %>
+  </div>
+  <div class="field">
+    <%= f.label :general_order_date %><br />
+    <%= f.date_select :general_order_date %>
+  </div>
+  <div class="field">
+    <%= f.label :general_order_no %><br />
+    <%= f.number_field :general_order_no %>
+  </div>
+  <div class="field">
+    <%= f.label :general_other %><br />
+    <%= f.text_area :general_other %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

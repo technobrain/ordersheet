@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_no: 1
+  department_cd: 1
+  author: MyString
+  revenue_unit_code: 1
+  project_cd: 1
+  business_cd: 1
+  contract_start_date: 2013-04-14
+  contract_end_date: 2013-04-14
+  work_place: MyString
+  income_date: 2013-04-14
+  payment_site: 1
+  work_start_date: 2013-04-14 23:51:01
+  work_end_date: 2013-04-14 23:51:01
+  other: MyText
+  general_receipt_date: 2013-04-14
+  general_order_date: 2013-04-14
+  general_order_no: 1
+  general_other: MyText
+
+two:
+  order_no: 1
+  department_cd: 1
+  author: MyString
+  revenue_unit_code: 1
+  project_cd: 1
+  business_cd: 1
+  contract_start_date: 2013-04-14
+  contract_end_date: 2013-04-14
+  work_place: MyString
+  income_date: 2013-04-14
+  payment_site: 1
+  work_start_date: 2013-04-14 23:51:01
+  work_end_date: 2013-04-14 23:51:01
+  other: MyText
+  general_receipt_date: 2013-04-14
+  general_order_date: 2013-04-14
+  general_order_no: 1
+  general_other: MyText

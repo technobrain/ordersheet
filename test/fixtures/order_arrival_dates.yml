@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_no: 1
+  detail_no: 1
+  arrival_date: 2013-04-14
+
+two:
+  order_no: 1
+  detail_no: 1
+  arrival_date: 2013-04-14
