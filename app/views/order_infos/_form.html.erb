@@ -11,78 +11,428 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :order_no %><br />
-    <%= f.number_field :order_no %>
-  </div>
-  <div class="field">
-    <%= f.label :department_cd %><br />
-    <%= f.number_field :department_cd %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :revenue_unit_code %><br />
-    <%= f.number_field :revenue_unit_code %>
-  </div>
-  <div class="field">
-    <%= f.label :project_cd %><br />
-    <%= f.number_field :project_cd %>
-  </div>
-  <div class="field">
-    <%= f.label :business_cd %><br />
-    <%= f.number_field :business_cd %>
-  </div>
-  <div class="field">
-    <%= f.label :contract_start_date %><br />
-    <%= f.date_select :contract_start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :contract_end_date %><br />
-    <%= f.date_select :contract_end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :work_place %><br />
-    <%= f.text_field :work_place %>
-  </div>
-  <div class="field">
-    <%= f.label :income_date %><br />
-    <%= f.date_select :income_date %>
-  </div>
-  <div class="field">
-    <%= f.label :payment_site %><br />
-    <%= f.number_field :payment_site %>
-  </div>
-  <div class="field">
-    <%= f.label :work_start_date %><br />
-    <%= f.time_select :work_start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :work_end_date %><br />
-    <%= f.time_select :work_end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :other %><br />
-    <%= f.text_area :other %>
-  </div>
-  <div class="field">
-    <%= f.label :general_receipt_date %><br />
-    <%= f.date_select :general_receipt_date %>
-  </div>
-  <div class="field">
-    <%= f.label :general_order_date %><br />
-    <%= f.date_select :general_order_date %>
-  </div>
-  <div class="field">
-    <%= f.label :general_order_no %><br />
-    <%= f.number_field :general_order_no %>
-  </div>
-  <div class="field">
-    <%= f.label :general_other %><br />
-    <%= f.text_area :general_other %>
-  </div>
+    <!-- ヘッダ部 -->
+    <table align="center" width="100%" border="1" cellspacing="1">
+      <tr>
+        <th width="20%">No</th>
+        <td><%= f.number_field :order_no %></br></td>
+        <th width="20%">作業日</th>
+        <td></br></td>
+      </tr>
+      <tr>
+        <th>所属</th>
+        <td><%= f.number_field :department_cd %></br></td>
+        <th>起票者</th>
+        <td><%= f.text_field :author %></br></td>
+      </tr>
+      <tr>
+        <th>売上計上事業部</th>
+        <td><%= f.number_field :revenue_unit_code %></br></td>
+      </tr>
+    </table>
+    <!-- 受注元情報部 -->
+    <table align="center" width="100%" border="1" cellspacing="1">
+    <tr>
+    <td>
+      <table align="center" width="100%" border="1" cellspacing="1">
+        <td colspan="2">受注元企業情報</td>
+        <tr>
+          <th width="20%">企業名</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>連絡先</th>
+          <td></br></td>
+        </tr>
+        <td colspan="2">受注案件情報</td>
+        </tr>
+        <tr>
+          <th>案件名</th>
+          <td><%= f.number_field :project_cd %></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>業務名</th>
+          <td><%= f.number_field :business_cd %></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>作業場所</th>
+          <td><%= f.text_field :work_place %></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>受注条件</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>受注案件</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <th>作業担当者</th>
+                <th>月額基本金額</th>
+                <th>月額稼働時間</th>
+                <th>控除単価</th>
+                <th>超過単価</th>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+            </table>
+            ※金額は税別
+          </td>
+        </tr>
+        <tr>
+          <th>検収日</th>
+          <td><%= f.date_select :income_date %></br></td>
+        </tr>
+        <tr>
+          <th>入金サイト</th>
+          <td><%= f.number_field :payment_site %></br></td>
+        </tr>
+        <tr>
+          <th>就業時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <th>始業</th>
+              <td width="30%"><%= f.time_select :work_start_date %></td>
+              <th>就業</th>
+              <td width="30%"><%= f.time_select :work_end_date %></td>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>休憩時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>注文書到着日</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td><textarea rows="5" cols="20"><%= f.text_area :other %></textarea></td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- 発注案件情報 -->
+    <td>
+      <table align="center" width="100%" border="1" cellspacing="1">
+        <td colspan="2">発注元企業情報</td>
+        <tr>
+          <th width="20%">企業名</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>連絡先</th>
+          <td></br></td>
+        </tr>
+        <td colspan="2">発注案件情報</td>
+        </tr>
+        <tr>
+          <th>案件名</th>
+          <td></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>業務名</th>
+          <td></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>作業場所</th>
+          <td></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>受注条件</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>発注案件</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <th>作業担当者</th>
+                <th>月額基本金額</th>
+                <th>月額稼働時間</th>
+                <th>控除単価</th>
+                <th>超過単価</th>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+            </table>
+            ※金額は税別
+          </td>
+        </tr>
+        <tr>
+          <th>検収日</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>入金サイト</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>就業時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <th>始業</th>
+              <td width="30%"></td>
+              <th>就業</th>
+              <td width="30%"></td>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>休憩時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>注文書到着日</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td><textarea rows="5" cols="20"></textarea></td>
+        </tr>
+      </table>
+    </td>
+    </tr>
+    </table>
+    <!-- フッタ部 -->
+    <table align="center" width="100%" border="1" cellspacing="1">
+      <tr>
+        <th>管理本部使用欄</th>
+        <td>
+          <table align="center" width="100%" border="1" cellspacing="1">
+            <tr>
+              <th rowspan="2">受領日</th>
+              <th colspan="2">注文書</th>
+              <th rowspan="2">備考</th>
+            </tr>
+            <tr>
+              <th>発効日</th>
+              <th>注文NO</th>
+            </tr>
+            <tr>
+              <td><%= f.date_select :general_receipt_date %></br></td>
+              <td><%= f.date_select :general_order_date %></br></td>
+              <td><%= f.number_field :general_order_no %></br></td>
+              <td><textarea rows="2" cols="20"><%= f.text_area :general_other %></textarea></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
   <div class="actions">
     <%= f.submit %>
   </div>
