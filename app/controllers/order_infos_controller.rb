@@ -5,7 +5,6 @@ class OrderInfosController < ApplicationController
   # GET /order_infos.json
   def index
     @order_infos = OrderInfo.all
-    set_order_masters
   end
 
   # GET /order_infos/1
@@ -15,12 +14,11 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/new
   def new
-
+    set_order_masters
   end
 
   # GET /order_infos/1/edit
   def edit
-    set_order_masters
   end
 
   # POST /order_infos
