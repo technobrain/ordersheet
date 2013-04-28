@@ -38,7 +38,13 @@
         <td colspan="2">受注元企業情報</td>
         <tr>
           <th width="20%">企業名</th>
-          <td></br></td>
+          <td>
+            <select name="company_cd">
+              <% @company_masters.each do |company| %>
+                  <option value="<%= company.company_cd %>"><%= company.company_name %></option>
+              <%end%>
+            </select>
+          </td>
         </tr>
         <tr>
           <th>連絡先</th>

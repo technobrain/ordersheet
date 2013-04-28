@@ -19,6 +19,7 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/1/edit
   def edit
+    set_order_masters
   end
 
   # POST /order_infos
