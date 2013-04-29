@@ -14,12 +14,11 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/new
   def new
-    set_order_masters
+    @order_info = OrderInfo.new
   end
 
   # GET /order_infos/1/edit
   def edit
-    set_order_masters
   end
 
   # POST /order_infos
@@ -70,17 +69,6 @@ class OrderInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_info_params
-      params.require(:order_info).permit(:order_no, :department_cd, :author, :revenue_unit_code, :project_cd, :business_cd, :contract_start_date, :contract_end_date, :work_place, :income_date, :payment_site, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :general_other)
-    end
-
-    def set_order_masters
-      @order_info = OrderInfo.new
-      @project_master = ProjectMaster.all
-      @business_master = BusinessMaster.all
-      @company_masters = CompanyMaster.all
-      @employee_master = EmployeeMaster.all
-      @order_break_time = OrderBreakTime.all
-      @payment_site_master = PaymentSiteMaster.all
-
+      params.require(:order_info).permit(:order_no, :company_cd, :unit_cd, :author, :revenue_unit_code, :project_cd, :business_cd, :contract_start_date, :contract_nd_date, :work_place, :income_date, :payment_site, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :geneal_other)
     end
 end
