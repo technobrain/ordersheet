@@ -62,15 +62,15 @@ class OrderInfosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order_info
-      @order_info = OrderInfo.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order_info
+    @order_info = OrderInfo.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_info_params
-      params.require(:order_info).permit(:order_no, :company_cd, :unit_cd, :author, :revenue_unit_code, :project_cd, :business_cd, :contract_start_date, :contract_nd_date, :work_place, :income_date, :payment_site, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :geneal_other)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_info_params
+    params.require(:order_info).permit(:order_no, :company_cd, :unit_cd, :author, :revenue_unit_code, :project_cd, :business_cd, :contract_start_date, :contract_nd_date, :work_place, :income_date, :payment_site, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :geneal_other)
+  end
 
   def set_order_masters
     @order_info = OrderInfo.new
@@ -82,3 +82,4 @@ class OrderInfosController < ApplicationController
     @payment_site_master = PaymentSiteMaster.all
 
   end
+end
