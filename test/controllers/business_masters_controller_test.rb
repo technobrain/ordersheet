@@ -18,7 +18,7 @@ class BusinessMastersControllerTest < ActionController::TestCase
 
   test "should create business_master" do
     assert_difference('BusinessMaster.count') do
-      post :create, business_master: { business_cd: @business_master.business_cd, business_name: @business_master.business_name, project_cd: @business_master.project_cd }
+      post :create, business_master: { business_name: @business_master.business_name }
     end
 
     assert_redirected_to business_master_path(assigns(:business_master))
@@ -35,7 +35,7 @@ class BusinessMastersControllerTest < ActionController::TestCase
   end
 
   test "should update business_master" do
-    patch :update, id: @business_master, business_master: { business_cd: @business_master.business_cd, business_name: @business_master.business_name, project_cd: @business_master.project_cd }
+    patch :update, id: @business_master, business_master: { business_name: @business_master.business_name }
     assert_redirected_to business_master_path(assigns(:business_master))
   end
 

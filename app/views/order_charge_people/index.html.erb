@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Order no</th>
-      <th>Employee cd</th>
+      <th>Order</th>
+      <th>Employee</th>
       <th>Basic amount</th>
       <th>Time limit lower</th>
       <th>Time limit upper</th>
@@ -19,8 +19,8 @@
   <tbody>
     <% @order_charge_people.each do |order_charge_person| %>
     <tr>
-      <td><%= order_charge_person.order_no %></td>
-      <td><%= order_charge_person.employee_cd %></td>
+      <td><%= order_charge_person.order_id %></td>
+      <td><%= order_charge_person.employee_id %></td>
       <td><%= order_charge_person.basic_amount %></td>
       <td><%= order_charge_person.time_limit_lower %></td>
       <td><%= order_charge_person.time_limit_upper %></td>

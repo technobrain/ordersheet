@@ -69,6 +69,6 @@ class PaymentSiteMastersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def payment_site_master_params
-      params.require(:payment_site_master).permit(:payment_site_code, :payment_site_name)
+      params.require(:payment_site_master).permit(:payment_site_name)
     end
 end

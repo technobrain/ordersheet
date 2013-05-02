@@ -18,7 +18,7 @@ class ProjectMastersControllerTest < ActionController::TestCase
 
   test "should create project_master" do
     assert_difference('ProjectMaster.count') do
-      post :create, project_master: { project_cd: @project_master.project_cd, project_name: @project_master.project_name }
+      post :create, project_master: { company_id: @project_master.company_id, project_name: @project_master.project_name }
     end
 
     assert_redirected_to project_master_path(assigns(:project_master))
@@ -35,7 +35,7 @@ class ProjectMastersControllerTest < ActionController::TestCase
   end
 
   test "should update project_master" do
-    patch :update, id: @project_master, project_master: { project_cd: @project_master.project_cd, project_name: @project_master.project_name }
+    patch :update, id: @project_master, project_master: { company_id: @project_master.company_id, project_name: @project_master.project_name }
     assert_redirected_to project_master_path(assigns(:project_master))
   end
 

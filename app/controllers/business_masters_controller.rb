@@ -69,6 +69,6 @@ class BusinessMastersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_master_params
-      params.require(:business_master).permit(:project_cd, :business_cd, :business_name)
+      params.require(:business_master).permit(:business_name)
     end
 end

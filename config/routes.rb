@@ -1,4 +1,10 @@
 Ordersheet::Application.routes.draw do
+  resources :order_dates
+
+  resources :unit_masters
+
+  resources :position_masters
+
   resources :payment_site_masters
 
   resources :order_arrival_dates

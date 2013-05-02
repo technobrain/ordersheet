@@ -18,7 +18,7 @@ class OrderBreakTimesControllerTest < ActionController::TestCase
 
   test "should create order_break_time" do
     assert_difference('OrderBreakTime.count') do
-      post :create, order_break_time: { break_time: @order_break_time.break_time, detail_no: @order_break_time.detail_no, order_no: @order_break_time.order_no }
+      post :create, order_break_time: { break_end_time: @order_break_time.break_end_time, break_start_time: @order_break_time.break_start_time, order_id: @order_break_time.order_id }
     end
 
     assert_redirected_to order_break_time_path(assigns(:order_break_time))
@@ -35,7 +35,7 @@ class OrderBreakTimesControllerTest < ActionController::TestCase
   end
 
   test "should update order_break_time" do
-    patch :update, id: @order_break_time, order_break_time: { break_time: @order_break_time.break_time, detail_no: @order_break_time.detail_no, order_no: @order_break_time.order_no }
+    patch :update, id: @order_break_time, order_break_time: { break_end_time: @order_break_time.break_end_time, break_start_time: @order_break_time.break_start_time, order_id: @order_break_time.order_id }
     assert_redirected_to order_break_time_path(assigns(:order_break_time))
   end
 

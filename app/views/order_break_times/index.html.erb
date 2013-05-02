@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Order no</th>
-      <th>Detail no</th>
-      <th>Break time</th>
+      <th>Order</th>
+      <th>Break start time</th>
+      <th>Break end time</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,9 +15,9 @@
   <tbody>
     <% @order_break_times.each do |order_break_time| %>
     <tr>
-      <td><%= order_break_time.order_no %></td>
-      <td><%= order_break_time.detail_no %></td>
-      <td><%= order_break_time.break_time %></td>
+      <td><%= order_break_time.order_id %></td>
+      <td><%= order_break_time.break_start_time %></td>
+      <td><%= order_break_time.break_end_time %></td>
       <td><%= link_to 'Show', order_break_time %></td>
       <td><%= link_to 'Edit', edit_order_break_time_path(order_break_time) %></td>
       <td><%= link_to 'Destroy', order_break_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>

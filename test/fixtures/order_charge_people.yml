@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  order_no: 1
-  employee_cd: MyString
+  order_id: 1
+  employee_id: MyString
   basic_amount: 1
   time_limit_lower: 1
   time_limit_upper: 1
@@ -10,8 +10,8 @@ one:
   overtime_bid: 1
 
 two:
-  order_no: 1
-  employee_cd: MyString
+  order_id: 1
+  employee_id: MyString
   basic_amount: 1
   time_limit_lower: 1
   time_limit_upper: 1

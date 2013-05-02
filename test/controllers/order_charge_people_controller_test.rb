@@ -18,7 +18,7 @@ class OrderChargePeopleControllerTest < ActionController::TestCase
 
   test "should create order_charge_person" do
     assert_difference('OrderChargePerson.count') do
-      post :create, order_charge_person: { basic_amount: @order_charge_person.basic_amount, deduction_bid: @order_charge_person.deduction_bid, employee_cd: @order_charge_person.employee_cd, order_no: @order_charge_person.order_no, overtime_bid: @order_charge_person.overtime_bid, time_limit_lower: @order_charge_person.time_limit_lower, time_limit_upper: @order_charge_person.time_limit_upper }
+      post :create, order_charge_person: { basic_amount: @order_charge_person.basic_amount, deduction_bid: @order_charge_person.deduction_bid, employee_id: @order_charge_person.employee_id, order_id: @order_charge_person.order_id, overtime_bid: @order_charge_person.overtime_bid, time_limit_lower: @order_charge_person.time_limit_lower, time_limit_upper: @order_charge_person.time_limit_upper }
     end
 
     assert_redirected_to order_charge_person_path(assigns(:order_charge_person))
@@ -35,7 +35,7 @@ class OrderChargePeopleControllerTest < ActionController::TestCase
   end
 
   test "should update order_charge_person" do
-    patch :update, id: @order_charge_person, order_charge_person: { basic_amount: @order_charge_person.basic_amount, deduction_bid: @order_charge_person.deduction_bid, employee_cd: @order_charge_person.employee_cd, order_no: @order_charge_person.order_no, overtime_bid: @order_charge_person.overtime_bid, time_limit_lower: @order_charge_person.time_limit_lower, time_limit_upper: @order_charge_person.time_limit_upper }
+    patch :update, id: @order_charge_person, order_charge_person: { basic_amount: @order_charge_person.basic_amount, deduction_bid: @order_charge_person.deduction_bid, employee_id: @order_charge_person.employee_id, order_id: @order_charge_person.order_id, overtime_bid: @order_charge_person.overtime_bid, time_limit_lower: @order_charge_person.time_limit_lower, time_limit_upper: @order_charge_person.time_limit_upper }
     assert_redirected_to order_charge_person_path(assigns(:order_charge_person))
   end
 

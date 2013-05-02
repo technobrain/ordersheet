@@ -3,12 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Company cd</th>
       <th>Company name</th>
       <th>Division name</th>
       <th>Charge person</th>
       <th>Contact</th>
       <th>Tel no</th>
+      <th>String</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,12 +18,12 @@
   <tbody>
     <% @company_masters.each do |company_master| %>
     <tr>
-      <td><%= company_master.company_cd %></td>
       <td><%= company_master.company_name %></td>
       <td><%= company_master.division_name %></td>
       <td><%= company_master.charge_person %></td>
       <td><%= company_master.contact %></td>
       <td><%= company_master.tel_no %></td>
+      <td><%= company_master.string %></td>
       <td><%= link_to 'Show', company_master %></td>
       <td><%= link_to 'Edit', edit_company_master_path(company_master) %></td>
       <td><%= link_to 'Destroy', company_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>

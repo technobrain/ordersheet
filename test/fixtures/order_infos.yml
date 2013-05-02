@@ -1,41 +1,41 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  order_no: 1
-  department_cd: 1
+  company_id: 1
+  unit_id: 1
   author: MyString
-  revenue_unit_code: 1
-  project_cd: 1
-  business_cd: 1
-  contract_start_date: 2013-04-14
-  contract_end_date: 2013-04-14
+  revenue_unit_id: 1
+  project_id: 1
+  business_id: 1
+  contract_start_date: 2013-05-02
+  contract_end_date: 2013-05-02
   work_place: MyString
-  income_date: 2013-04-14
-  payment_site: 1
-  work_start_date: 2013-04-14 23:51:01
-  work_end_date: 2013-04-14 23:51:01
+  income_date: 2013-05-02
+  payment_site_id: 1
+  work_start_date: 2013-05-02 22:41:04
+  work_end_date: 2013-05-02 22:41:04
   other: MyText
-  general_receipt_date: 2013-04-14
-  general_order_date: 2013-04-14
+  general_receipt_date: 2013-05-02
+  general_order_date: 2013-05-02
   general_order_no: 1
-  general_other: MyText
+  geneal_other: MyText
 
 two:
-  order_no: 1
-  department_cd: 1
+  company_id: 1
+  unit_id: 1
   author: MyString
-  revenue_unit_code: 1
-  project_cd: 1
-  business_cd: 1
-  contract_start_date: 2013-04-14
-  contract_end_date: 2013-04-14
+  revenue_unit_id: 1
+  project_id: 1
+  business_id: 1
+  contract_start_date: 2013-05-02
+  contract_end_date: 2013-05-02
   work_place: MyString
-  income_date: 2013-04-14
-  payment_site: 1
-  work_start_date: 2013-04-14 23:51:01
-  work_end_date: 2013-04-14 23:51:01
+  income_date: 2013-05-02
+  payment_site_id: 1
+  work_start_date: 2013-05-02 22:41:04
+  work_end_date: 2013-05-02 22:41:04
   other: MyText
-  general_receipt_date: 2013-04-14
-  general_order_date: 2013-04-14
+  general_receipt_date: 2013-05-02
+  general_order_date: 2013-05-02
   general_order_no: 1
-  general_other: MyText
+  geneal_other: MyText

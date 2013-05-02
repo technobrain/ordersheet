@@ -3,12 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Order no</th>
-      <th>Department cd</th>
+      <th>Company</th>
+      <th>Unit</th>
       <th>Author</th>
-      <th>Revenue unit code</th>
-      <th>Project cd</th>
-      <th>Business cd</th>
+      <th>Revenue unit</th>
+      <th>Project</th>
+      <th>Business</th>
       <th>Contract start date</th>
       <th>Contract end date</th>
       <th>Work place</th>
@@ -20,7 +20,7 @@
       <th>General receipt date</th>
       <th>General order date</th>
       <th>General order no</th>
-      <th>General other</th>
+      <th>Geneal other</th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,24 +30,24 @@
   <tbody>
     <% @order_infos.each do |order_info| %>
     <tr>
-      <td><%= order_info.order_no %></td>
-      <td><%= order_info.department_cd %></td>
+      <td><%= order_info.company_id %></td>
+      <td><%= order_info.unit_id %></td>
       <td><%= order_info.author %></td>
-      <td><%= order_info.revenue_unit_code %></td>
-      <td><%= order_info.project_cd %></td>
-      <td><%= order_info.business_cd %></td>
+      <td><%= order_info.revenue_unit_id %></td>
+      <td><%= order_info.project_id %></td>
+      <td><%= order_info.business_id %></td>
       <td><%= order_info.contract_start_date %></td>
       <td><%= order_info.contract_end_date %></td>
       <td><%= order_info.work_place %></td>
       <td><%= order_info.income_date %></td>
-      <td><%= order_info.payment_site %></td>
+      <td><%= order_info.payment_site_id %></td>
       <td><%= order_info.work_start_date %></td>
       <td><%= order_info.work_end_date %></td>
       <td><%= order_info.other %></td>
       <td><%= order_info.general_receipt_date %></td>
       <td><%= order_info.general_order_date %></td>
       <td><%= order_info.general_order_no %></td>
-      <td><%= order_info.general_other %></td>
+      <td><%= order_info.geneal_other %></td>
       <td><%= link_to 'Show', order_info %></td>
       <td><%= link_to 'Edit', edit_order_info_path(order_info) %></td>
       <td><%= link_to 'Destroy', order_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -69,6 +69,6 @@ class OrderBreakTimesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_break_time_params
-      params.require(:order_break_time).permit(:order_no, :detail_no, :break_time)
+      params.require(:order_break_time).permit(:order_id, :break_start_time, :break_end_time)
     end
 end

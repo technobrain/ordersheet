@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :company_cd %><br />
-    <%= f.number_field :company_cd %>
-  </div>
-  <div class="field">
     <%= f.label :company_name %><br />
     <%= f.text_field :company_name %>
   </div>
@@ -34,6 +30,10 @@
   <div class="field">
     <%= f.label :tel_no %><br />
     <%= f.text_field :tel_no %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br />
+    <%= f.text_field :string %>
   </div>
   <div class="actions">
     <%= f.submit %>

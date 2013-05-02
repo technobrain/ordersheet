@@ -18,7 +18,7 @@ class PaymentSiteMastersControllerTest < ActionController::TestCase
 
   test "should create payment_site_master" do
     assert_difference('PaymentSiteMaster.count') do
-      post :create, payment_site_master: { payment_site_code: @payment_site_master.payment_site_code, payment_site_name: @payment_site_master.payment_site_name }
+      post :create, payment_site_master: { payment_site_name: @payment_site_master.payment_site_name }
     end
 
     assert_redirected_to payment_site_master_path(assigns(:payment_site_master))
@@ -35,7 +35,7 @@ class PaymentSiteMastersControllerTest < ActionController::TestCase
   end
 
   test "should update payment_site_master" do
-    patch :update, id: @payment_site_master, payment_site_master: { payment_site_code: @payment_site_master.payment_site_code, payment_site_name: @payment_site_master.payment_site_name }
+    patch :update, id: @payment_site_master, payment_site_master: { payment_site_name: @payment_site_master.payment_site_name }
     assert_redirected_to payment_site_master_path(assigns(:payment_site_master))
   end
 

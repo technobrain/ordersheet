@@ -69,6 +69,6 @@ class EmployeeMastersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_master_params
-      params.require(:employee_master).permit(:employee_cd, :employee_name, :employee_name_kana, :position_cd, :unit_cd, :email_address1, :emai_address2, :postal_cd, :address1, :address2, :tel_no, :fax_no, :mobile_tel_no1, :mobile_tel_no2, :emergency_tel_no, :birth_date, :station, :birth_place, :education_level, :other)
+      params.require(:employee_master).permit(:employee_cd, :employee_name, :employee_name_kana, :position_id, :unit_id, :email_address1, :emai_address2, :postal_cd, :address1, :address2, :tel_no, :fax_no, :mobile_tel_no1, :mobile_tel_no2, :emergency_tel_no, :birth_date, :station, :birth_place, :education_level, :other)
     end
 end

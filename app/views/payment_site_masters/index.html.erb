@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Payment site code</th>
       <th>Payment site name</th>
       <th></th>
       <th></th>
@@ -14,7 +13,6 @@
   <tbody>
     <% @payment_site_masters.each do |payment_site_master| %>
     <tr>
-      <td><%= payment_site_master.payment_site_code %></td>
       <td><%= payment_site_master.payment_site_name %></td>
       <td><%= link_to 'Show', payment_site_master %></td>
       <td><%= link_to 'Edit', edit_payment_site_master_path(payment_site_master) %></td>

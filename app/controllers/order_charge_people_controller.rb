@@ -69,6 +69,6 @@ class OrderChargePeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_charge_person_params
-      params.require(:order_charge_person).permit(:order_no, :employee_cd, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid)
+      params.require(:order_charge_person).permit(:order_id, :employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid)
     end
 end

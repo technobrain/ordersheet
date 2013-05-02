@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Project cd</th>
+      <th>Company</th>
       <th>Project name</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @project_masters.each do |project_master| %>
     <tr>
-      <td><%= project_master.project_cd %></td>
+      <td><%= project_master.company_id %></td>
       <td><%= project_master.project_name %></td>
       <td><%= link_to 'Show', project_master %></td>
       <td><%= link_to 'Edit', edit_project_master_path(project_master) %></td>

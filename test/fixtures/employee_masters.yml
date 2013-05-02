@@ -4,8 +4,8 @@ one:
   employee_cd: MyString
   employee_name: MyString
   employee_name_kana: MyString
-  position_cd: 1
-  unit_cd: 1
+  position_id: 1
+  unit_id: 1
   email_address1: MyString
   emai_address2: MyString
   postal_cd: MyString
@@ -16,7 +16,7 @@ one:
   mobile_tel_no1: MyString
   mobile_tel_no2: MyString
   emergency_tel_no: MyString
-  birth_date: 2013-04-14
+  birth_date: 2013-05-02
   station: MyString
   birth_place: MyString
   education_level: MyString
@@ -26,8 +26,8 @@ two:
   employee_cd: MyString
   employee_name: MyString
   employee_name_kana: MyString
-  position_cd: 1
-  unit_cd: 1
+  position_id: 1
+  unit_id: 1
   email_address1: MyString
   emai_address2: MyString
   postal_cd: MyString
@@ -38,7 +38,7 @@ two:
   mobile_tel_no1: MyString
   mobile_tel_no2: MyString
   emergency_tel_no: MyString
-  birth_date: 2013-04-14
+  birth_date: 2013-05-02
   station: MyString
   birth_place: MyString
   education_level: MyString
