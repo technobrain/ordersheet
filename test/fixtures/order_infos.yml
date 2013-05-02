@@ -12,13 +12,13 @@ one:
   work_place: MyString
   income_date: 2013-05-02
   payment_site_id: 1
-  work_start_date: 2013-05-02 22:41:04
-  work_end_date: 2013-05-02 22:41:04
+  work_start_date: 2013-05-02 23:32:36
+  work_end_date: 2013-05-02 23:32:36
   other: MyText
   general_receipt_date: 2013-05-02
   general_order_date: 2013-05-02
   general_order_no: 1
-  geneal_other: MyText
+  general_other: MyText
 
 two:
   company_id: 1
@@ -32,10 +32,10 @@ two:
   work_place: MyString
   income_date: 2013-05-02
   payment_site_id: 1
-  work_start_date: 2013-05-02 22:41:04
-  work_end_date: 2013-05-02 22:41:04
+  work_start_date: 2013-05-02 23:32:36
+  work_end_date: 2013-05-02 23:32:36
   other: MyText
   general_receipt_date: 2013-05-02
   general_order_date: 2013-05-02
   general_order_no: 1
-  geneal_other: MyText
+  general_other: MyText
