@@ -14,7 +14,7 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/new
   def new
-    @order_info = OrderInfo.new
+    set_order_masters
   end
 
   # GET /order_infos/1/edit
