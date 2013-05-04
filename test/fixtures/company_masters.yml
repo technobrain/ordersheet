@@ -6,7 +6,6 @@ one:
   charge_person: MyString
   contact: MyString
   tel_no: MyString
-  string: MyString
 
 two:
   company_name: MyString
@@ -14,4 +13,3 @@ two:
   charge_person: MyString
   contact: MyString
   tel_no: MyString
-  string: MyString
