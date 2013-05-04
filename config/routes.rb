@@ -1,4 +1,5 @@
 Ordersheet::Application.routes.draw do
+  get "top/index"
   resources :order_dates
 
   resources :unit_masters
