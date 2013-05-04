@@ -12,13 +12,65 @@
 発注情報登録<br>
 
 <h2>マスタメンテ機能</h2>
-<%= link_to '取引先マスタ', '/company_masters#index' %>
-社員マスタ<br>
-案件マスタ<br>
-業務マスタ<br>
-職制マスタ<br>
-部署マスタ<br>
-入金サイトマスタ<br>
+<table>
+  <tr>
+    <th>
+      <%= link_to '取引先マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+      取引先を部署単位で管理するマスタ
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= link_to '社員マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+      社員管理用のマスタ
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= link_to '案件マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+      案件管理用のマスタ
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      <%= link_to '業務マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+      業務における工程内容を管理するマスタ
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= link_to '職制マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+      自社内の職制を管理するマスタ
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= link_to '部署マスタ', '/company_masters#index' %>
+    </th>
+    <td>
+     自社内の部署を管理するマスタ
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= link_to '入金サイトマスタ', '/company_masters#index' %>
+    </th>
+    <td>
+     入金サイトを管理するマスタ
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>
