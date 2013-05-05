@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position name:</strong>
+  <%= @position_master.position_name %>
+</p>
+
+<p>
+  <strong>Position expenses:</strong>
+  <%= @position_master.position_expenses %>
+</p>
+
+
+<%= link_to 'Edit', edit_position_master_path(@position_master) %> |
+<%= link_to 'Back', position_masters_path %>

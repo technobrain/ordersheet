@@ -1,0 +1,29 @@
+<h1>Listing position_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Position expenses</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @position_masters.each do |position_master| %>
+    <tr>
+      <td><%= position_master.position_name %></td>
+      <td><%= position_master.position_expenses %></td>
+      <td><%= link_to 'Show', position_master %></td>
+      <td><%= link_to 'Edit', edit_position_master_path(position_master) %></td>
+      <td><%= link_to 'Destroy', position_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Position master', new_position_master_path %>

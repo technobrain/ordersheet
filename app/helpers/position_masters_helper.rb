@@ -1,0 +1,2 @@
+module PositionMastersHelper
+end
