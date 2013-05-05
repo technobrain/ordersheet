@@ -80,6 +80,8 @@ class OrderInfosController < ApplicationController
     @employee_master = EmployeeMaster.all
     @order_break_time = OrderBreakTime.all
     @payment_site_master = PaymentSiteMaster.all
+    @position_master = PositionMaster.all
+    @unit_master = UnitMaster.all
 
   end
 end
