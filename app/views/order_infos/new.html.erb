@@ -24,12 +24,12 @@
       <tr>
         <th>所属</th>
         <td>
-        <select name="unit_id">
-          <% @unit_masters.each do |unit| %>
-              <option value="<%= unit.id %>"><%= unit.unit_name %></option>
-          <%end%>
-        </select>
-          </td>
+          <select name="unit_id">
+            <% @unit_masters.each do |unit| %>
+                <option value="<%= unit.id %>"><%= unit.unit_name %></option>
+            <%end%>
+          </select>
+        </td>
         <th>起票者</th>
         <td><%= f.text_field :author %></br></td>
       </tr>
@@ -46,226 +46,218 @@
     </table>
     <!-- 受注元情報部 -->
     <table align="center" width="80%" border="1" cellspacing="1">
+    <td colspan="2">受注元企業情報</td>
     <tr>
-    <td>
-      <table align="center" width="100%" border="1" cellspacing="1">
-        <td colspan="2">受注元企業情報</td>
-        <tr>
-          <th width="20%">企業名</th>
-          <td>
-            <select name="company_id">
-              <% @company_masters.each do |company| %>
-                  <option value="<%= company.id %>"><%= company.company_name %></option>
-              <%end%>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>連絡先</th>
-          <td><%= f.text_field :author %></br></td>
-        </tr>
-        <td colspan="2">受注案件情報</td>
-        </tr>
-        <tr>
-          <th>案件名</th>
-          <td>
-            <select name="company_id">
-              <% @project_masters.each do |project| %>
-                  <option value="<%= project.id %>"><%= project.project_name %></option>
-              <%end%>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>業務名</th>
-          <td>
-            <select name="business_id">
-              <% @business_masters.each do |business| %>
-                  <option value="<%= business.id %>"><%= business.business_name %></option>
-              <%end%>
-            </select>
-          </td>        </tr>
-        </tr>
-        <tr>
-          <th>作業場所</th>
-          <td><%= f.text_field :work_place %></br></td>
-        </tr>
-        </tr>
-        <tr>
-          <th>受注条件</th>
-          <td></br></td>
-        </tr>
-        <tr>
-          <th>受注案件</th>
-          <td>
-            <table align="center" width="100%" border="1" cellspacing="1">
-              <tr>
-                <th>作業担当者</th>
-                <th>月額基本金額</th>
-                <th>月額稼働時間</th>
-                <th>控除単価</th>
-                <th>超過単価</th>
-              </tr>
-              <tr>
-                <td>
-                <select name="order_charge_person_employee_01">
-                  <% @employee_masters.each do |employee| %>
-                      <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                  <%end%>
-                </select>
-                </td>
-                <td>
-                <td><input type="number" name="order_charge_person_basic_amount_01">
-                <td><input type="number" name="order_charge_person_time_limit_lower_01">
-                <td><input type="number" name="order_charge_person_time_limit_upper_01">
-                <td><input type="number" name="order_charge_person_deduction_bid_01">
-                <td><input type="number" name="order_charge_person_overtime_bid_01">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_02">
-                <td><input type="number" name="order_charge_person_time_limit_lower_02">
-                <td><input type="number" name="order_charge_person_time_limit_upper_02">
-                <td><input type="number" name="order_charge_person_deduction_bid_02">
-                <td><input type="number" name="order_charge_person_overtime_bid_02">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_03">
-                <td><input type="number" name="order_charge_person_time_limit_lower_03">
-                <td><input type="number" name="order_charge_person_time_limit_upper_03">
-                <td><input type="number" name="order_charge_person_deduction_bid_03">
-                <td><input type="number" name="order_charge_person_overtime_bid_03">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_04">
-                <td><input type="number" name="order_charge_person_time_limit_lower_04">
-                <td><input type="number" name="order_charge_person_time_limit_upper_04">
-                <td><input type="number" name="order_charge_person_deduction_bid_04">
-                <td><input type="number" name="order_charge_person_overtime_bid_04">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_05">
-                <td><input type="number" name="order_charge_person_time_limit_lower_05">
-                <td><input type="number" name="order_charge_person_time_limit_upper_05">
-                <td><input type="number" name="order_charge_person_deduction_bid_05">
-                <td><input type="number" name="order_charge_person_overtime_bid_05">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_06">
-                <td><input type="number" name="order_charge_person_time_limit_lower_06">
-                <td><input type="number" name="order_charge_person_time_limit_upper_06">
-                <td><input type="number" name="order_charge_person_deduction_bid_06">
-                <td><input type="number" name="order_charge_person_overtime_bid_06">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_07">
-                <td><input type="number" name="order_charge_person_time_limit_lower_07">
-                <td><input type="number" name="order_charge_person_time_limit_upper_07">
-                <td><input type="number" name="order_charge_person_deduction_bid_07">
-                <td><input type="number" name="order_charge_person_overtime_bid_07">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_08">
-                <td><input type="number" name="order_charge_person_time_limit_lower_08">
-                <td><input type="number" name="order_charge_person_time_limit_upper_08">
-                <td><input type="number" name="order_charge_person_deduction_bid_08">
-                <td><input type="number" name="order_charge_person_overtime_bid_08">
-              </tr>
-              <tr>
-                <td><input type="number" name="order_charge_person_basic_amount_09">
-                <td><input type="number" name="order_charge_person_time_limit_lower_09">
-                <td><input type="number" name="order_charge_person_time_limit_upper_09">
-                <td><input type="number" name="order_charge_person_deduction_bid_09">
-                <td><input type="number" name="order_charge_person_overtime_bid_09">
-              </tr>
-            </table>
-            ※金額は税別
-          </td>
-        </tr>
-        <tr>
-          <th>検収日</th>
-          <td><%= f.date_select :income_date %></br></td>
-        </tr>
-        <tr>
-          <th>入金サイト</th>
-          <select name="payment_site_id">
-            <% @payment_site_masters.each do |payment_site| %>
-                <option value="<%= payment_site.id %>"><%= payment_site.payment_site_name %></option>
-            <%end%>
-          </select>
-        </tr>
-        <tr>
-          <th>就業時間</th>
-          <td>
-            <table align="center" width="100%" border="1" cellspacing="1">
-              <th>始業</th>
-              <td width="30%"><%= f.time_select :work_start_date %></td>
-              <th>就業</th>
-              <td width="30%"><%= f.time_select :work_end_date %></td>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <th>休憩時間</th>
-          <td>
-            <table align="center" width="100%" border="1" cellspacing="1">
-              <tr>
-                <td align="center" width="10%">①</td>
-                <td width="30%"><input type="time" name="break_start_time_01">
-                <td align="center" width="10%">～</td>
-                <td width="30%"><input type="time" name="break_start_time_01">
-              </tr>
-              <tr>
-                <td align="center" width="10%">②</td>
-                <td width="30%"><input type="time" name="break_start_time_02">
-                <td align="center" width="10%">～</td>
-                <td width="30%"><input type="time" name="break_start_time_02">
-              </tr>
-              <tr>
-                <td align="center" width="10%">③</td>
-                <td width="30%"><input type="time" name="break_start_time_03">
-                <td align="center" width="10%">～</td>
-                <td width="30%"><input type="time" name="break_start_time_03">
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <th>注文書到着日</th>
-          <td>
-            <table align="center" width="100%" border="1" cellspacing="1">
-              <tr>
-                <td align="center" width="10%">①</td>
-                <td><input type="time" name="order_date_01"></br></td>
-                <td align="center" width="10%">期間</td>
-                <td></br></td>
-              </tr>
-              <tr>
-                <td align="center" width="10%">②</td>
-                <td><input type="time" name="order_date_02"></br></td>
-                <td align="center" width="10%">期間</td>
-                <td></br></td>
-              </tr>
-              <tr>
-                <td align="center" width="10%">③</td>
-                <td><input type="time" name="order_date_03"></br></td>
-                <td align="center" width="10%">期間</td>
-                <td></br></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <th>備考</th>
-          <td><textarea rows="5" cols="20"><%= f.text_area :other %></textarea></td>
-        </tr>
-      </table>
-    </td>
+      <th width="20%">企業名</th>
+      <td>
+        <select name="company_id">
+          <% @company_masters.each do |company| %>
+              <option value="<%= company.id %>"><%= company.company_name %></option>
+          <%end%>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>連絡先</th>
+      <td><%= f.text_field :author %></br></td>
+    </tr>
+    <td colspan="2">受注案件情報</td>
+    </tr>
+    <tr>
+      <th>案件名</th>
+      <td>
+        <select name="company_id">
+          <% @project_masters.each do |project| %>
+              <option value="<%= project.id %>"><%= project.project_name %></option>
+          <%end%>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>業務名</th>
+      <td>
+        <select name="business_id">
+          <% @business_masters.each do |business| %>
+              <option value="<%= business.id %>"><%= business.business_name %></option>
+          <%end%>
+        </select>
+      </td>        </tr>
+    </tr>
+    <tr>
+      <th>作業場所</th>
+      <td><%= f.text_field :work_place %></br></td>
+    </tr>
+    </tr>
+    <tr>
+      <th>受注案件</th>
+      <td>
+        <table align="center" width="100%" border="1" cellspacing="1">
+          <tr>
+            <th>作業担当者</th>
+            <th>月額基本金額</th>
+            <th>月額稼働時間</th>
+            <th>控除単価</th>
+            <th>超過単価</th>
+          </tr>
+          <tr>
+            <td>
+              <select name="order_charge_person_employee_01">
+                <% @employee_masters.each do |employee| %>
+                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
+                <%end%>
+              </select>
+            </td>
+            <td>
+            <td><input type="number" name="order_charge_person_basic_amount_01">
+            <td><input type="number" name="order_charge_person_time_limit_lower_01">
+            <td><input type="number" name="order_charge_person_time_limit_upper_01">
+            <td><input type="number" name="order_charge_person_deduction_bid_01">
+            <td><input type="number" name="order_charge_person_overtime_bid_01">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_02">
+            <td><input type="number" name="order_charge_person_time_limit_lower_02">
+            <td><input type="number" name="order_charge_person_time_limit_upper_02">
+            <td><input type="number" name="order_charge_person_deduction_bid_02">
+            <td><input type="number" name="order_charge_person_overtime_bid_02">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_03">
+            <td><input type="number" name="order_charge_person_time_limit_lower_03">
+            <td><input type="number" name="order_charge_person_time_limit_upper_03">
+            <td><input type="number" name="order_charge_person_deduction_bid_03">
+            <td><input type="number" name="order_charge_person_overtime_bid_03">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_04">
+            <td><input type="number" name="order_charge_person_time_limit_lower_04">
+            <td><input type="number" name="order_charge_person_time_limit_upper_04">
+            <td><input type="number" name="order_charge_person_deduction_bid_04">
+            <td><input type="number" name="order_charge_person_overtime_bid_04">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_05">
+            <td><input type="number" name="order_charge_person_time_limit_lower_05">
+            <td><input type="number" name="order_charge_person_time_limit_upper_05">
+            <td><input type="number" name="order_charge_person_deduction_bid_05">
+            <td><input type="number" name="order_charge_person_overtime_bid_05">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_06">
+            <td><input type="number" name="order_charge_person_time_limit_lower_06">
+            <td><input type="number" name="order_charge_person_time_limit_upper_06">
+            <td><input type="number" name="order_charge_person_deduction_bid_06">
+            <td><input type="number" name="order_charge_person_overtime_bid_06">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_07">
+            <td><input type="number" name="order_charge_person_time_limit_lower_07">
+            <td><input type="number" name="order_charge_person_time_limit_upper_07">
+            <td><input type="number" name="order_charge_person_deduction_bid_07">
+            <td><input type="number" name="order_charge_person_overtime_bid_07">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_08">
+            <td><input type="number" name="order_charge_person_time_limit_lower_08">
+            <td><input type="number" name="order_charge_person_time_limit_upper_08">
+            <td><input type="number" name="order_charge_person_deduction_bid_08">
+            <td><input type="number" name="order_charge_person_overtime_bid_08">
+          </tr>
+          <tr>
+            <td><input type="number" name="order_charge_person_basic_amount_09">
+            <td><input type="number" name="order_charge_person_time_limit_lower_09">
+            <td><input type="number" name="order_charge_person_time_limit_upper_09">
+            <td><input type="number" name="order_charge_person_deduction_bid_09">
+            <td><input type="number" name="order_charge_person_overtime_bid_09">
+          </tr>
+        </table>
+        ※金額は税別
+      </td>
+    </tr>
+    <tr>
+      <th>検収日</th>
+      <td><%= f.date_select :income_date %></br></td>
+    </tr>
+    <tr>
+      <th>入金サイト</th>
+      <select name="payment_site_id">
+        <% @payment_site_masters.each do |payment_site| %>
+            <option value="<%= payment_site.id %>"><%= payment_site.payment_site_name %></option>
+        <%end%>
+      </select>
+    </tr>
+    <tr>
+      <th>就業時間</th>
+      <td>
+        <table align="center" width="100%" border="1" cellspacing="1">
+          <th>始業</th>
+          <td width="30%"><%= f.time_select :work_start_date %></td>
+          <th>就業</th>
+          <td width="30%"><%= f.time_select :work_end_date %></td>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>休憩時間</th>
+      <td>
+        <table align="center" width="100%" border="1" cellspacing="1">
+          <tr>
+            <td align="center" width="10%">①</td>
+            <td width="30%"><input type="time" name="break_start_time_01">
+            <td align="center" width="10%">～</td>
+            <td width="30%"><input type="time" name="break_start_time_01">
+          </tr>
+          <tr>
+            <td align="center" width="10%">②</td>
+            <td width="30%"><input type="time" name="break_start_time_02">
+            <td align="center" width="10%">～</td>
+            <td width="30%"><input type="time" name="break_start_time_02">
+          </tr>
+          <tr>
+            <td align="center" width="10%">③</td>
+            <td width="30%"><input type="time" name="break_start_time_03">
+            <td align="center" width="10%">～</td>
+            <td width="30%"><input type="time" name="break_start_time_03">
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>注文書到着日</th>
+      <td>
+        <table align="center" width="100%" border="1" cellspacing="1">
+          <tr>
+            <td align="center" width="10%">①</td>
+            <td><input type="time" name="order_date_01"></br></td>
+            <td align="center" width="10%">期間</td>
+            <td></br></td>
+          </tr>
+          <tr>
+            <td align="center" width="10%">②</td>
+            <td><input type="time" name="order_date_02"></br></td>
+            <td align="center" width="10%">期間</td>
+            <td></br></td>
+          </tr>
+          <tr>
+            <td align="center" width="10%">③</td>
+            <td><input type="time" name="order_date_03"></br></td>
+            <td align="center" width="10%">期間</td>
+            <td></br></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>備考</th>
+      <td><textarea rows="5" cols="20"><%= f.text_area :other %></textarea></td>
+    </tr>
+    </table>
     <!-- フッタ部 -->
-    <table align="center" width="100%" border="1" cellspacing="1">
+    <table align="center" width="80%" border="1" cellspacing="1">
       <tr>
         <th>管理本部使用欄</th>
         <td>
-          <table align="center" width="100%" border="1" cellspacing="1">
+          <table align="center" width="80%" border="1" cellspacing="1">
             <tr>
               <th rowspan="2">受領日</th>
               <th colspan="2">注文書</th>
