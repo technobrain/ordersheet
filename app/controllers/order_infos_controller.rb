@@ -73,15 +73,15 @@ class OrderInfosController < ApplicationController
   end
 
   def set_order_masters
-    @order_info = OrderInfo.new
-    @project_master = ProjectMaster.all
-    @business_master = BusinessMaster.all
+    @order_infos = OrderInfo.new
+    @project_masters = ProjectMaster.all
+    @business_masters = BusinessMaster.all
     @company_masters = CompanyMaster.all
-    @employee_master = EmployeeMaster.all
-    @order_break_time = OrderBreakTime.all
-    @payment_site_master = PaymentSiteMaster.all
-    @position_master = PositionMaster.all
-    @unit_master = UnitMaster.all
+    @employee_masters = EmployeeMaster.all
+    @order_break_times = OrderBreakTime.all
+    @payment_site_masters = PaymentSiteMaster.all
+    @position_masters = PositionMaster.all
+    @unit_masters = UnitMaster.all
 
   end
 end

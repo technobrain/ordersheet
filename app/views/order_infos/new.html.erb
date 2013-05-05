@@ -109,7 +109,7 @@
               <tr>
                 <td>
                 <select name="order_charge_person_employee_01">
-                  <% @employee_master.each do |employee| %>
+                  <% @employee_masters.each do |employee| %>
                       <option value="<%= employee.id %>"><%= employee.employee_name %></option>
                   <%end%>
                 </select>
