@@ -1,5 +1,291 @@
 <h1>New order_info</h1>
 
-<%= render 'form' %>
+<%= form_for(@order_info) do |f| %>
+    <% if @order_info.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@order_info.errors.count, "error") %> prohibited this order_info from being saved:</h2>
+
+          <ul>
+            <% @order_info.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <!-- ヘッダ部 -->
+    <table align="center" width="80%" border="1" cellspacing="1">
+      <tr>
+        <th width="20%">No</th>
+        <td><%= f.number_field :id %></br></td>
+        <th width="20%">作業日</th>
+        <td></br></td>
+      </tr>
+      <tr>
+        <th>所属</th>
+        <td>
+        <select name="unit_id">
+          <% @unit_masters.each do |unit| %>
+              <option value="<%= unit.id %>"><%= unit.unit_name %></option>
+          <%end%>
+        </select>
+          </td>
+        <th>起票者</th>
+        <td><%= f.text_field :author %></br></td>
+      </tr>
+      <tr>
+        <th>売上計上事業部</th>
+        <td>
+          <select name="revenue_unit_id">
+            <% @unit_masters.each do |unit| %>
+                <option value="<%= unit.id %>"><%= unit.unit_name %></option>
+            <%end%>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <!-- 受注元情報部 -->
+    <table align="center" width="80%" border="1" cellspacing="1">
+    <tr>
+    <td>
+      <table align="center" width="100%" border="1" cellspacing="1">
+        <td colspan="2">受注元企業情報</td>
+        <tr>
+          <th width="20%">企業名</th>
+          <td>
+            <select name="company_id">
+              <% @company_masters.each do |company| %>
+                  <option value="<%= company.id %>"><%= company.company_name %></option>
+              <%end%>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>連絡先</th>
+          <td><%= f.text_field :author %></br></td>
+        </tr>
+        <td colspan="2">受注案件情報</td>
+        </tr>
+        <tr>
+          <th>案件名</th>
+          <td>
+            <select name="company_id">
+              <% @project_masters.each do |project| %>
+                  <option value="<%= project.id %>"><%= project.project_name %></option>
+              <%end%>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>業務名</th>
+          <td>
+            <select name="business_id">
+              <% @business_masters.each do |business| %>
+                  <option value="<%= business.id %>"><%= business.business_name %></option>
+              <%end%>
+            </select>
+          </td>        </tr>
+        </tr>
+        <tr>
+          <th>作業場所</th>
+          <td><%= f.text_field :work_place %></br></td>
+        </tr>
+        </tr>
+        <tr>
+          <th>受注条件</th>
+          <td></br></td>
+        </tr>
+        <tr>
+          <th>受注案件</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <th>作業担当者</th>
+                <th>月額基本金額</th>
+                <th>月額稼働時間</th>
+                <th>控除単価</th>
+                <th>超過単価</th>
+              </tr>
+              <tr>
+                <td>
+                <select name="order_charge_person_employee_01">
+                  <% @employee_master.each do |employee| %>
+                      <option value="<%= employee.id %>"><%= employee.employee_name %></option>
+                  <%end%>
+                </select>
+                </td>
+                <td>
+                <td><%= f.number_field number_with_delimiter(:order_charge_person_basic_amount_01) %></br></td>
+                <td><%= f.number_field :order_charge_person_time_limit_lower_01 %></br></td>
+                <td><%= f.number_field :order_charge_person_time_limit_upper_01 %></br></td>
+                <td><%= f.number_field :order_charge_person_deduction_bid_01 %></br></td>
+                <td><%= f.number_field :order_charge_person_overtime_bid_01 %></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+                <td></br></td>
+              </tr>
+            </table>
+            ※金額は税別
+          </td>
+        </tr>
+        <tr>
+          <th>検収日</th>
+          <td><%= f.date_select :income_date %></br></td>
+        </tr>
+        <tr>
+          <th>入金サイト</th>
+          <td><%= f.number_field :payment_site_id %></br></td>
+        </tr>
+        <tr>
+          <th>就業時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <th>始業</th>
+              <td width="30%"><%= f.time_select :work_start_date %></td>
+              <th>就業</th>
+              <td width="30%"><%= f.time_select :work_end_date %></td>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>休憩時間</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">～</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>注文書到着日</th>
+          <td>
+            <table align="center" width="100%" border="1" cellspacing="1">
+              <tr>
+                <td align="center" width="10%">①</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">②</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+              <tr>
+                <td align="center" width="10%">③</td>
+                <td></br></td>
+                <td align="center" width="10%">期間</td>
+                <td></br></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td><textarea rows="5" cols="20"><%= f.text_area :other %></textarea></td>
+        </tr>
+      </table>
+    </td>
+    <!-- フッタ部 -->
+    <table align="center" width="100%" border="1" cellspacing="1">
+      <tr>
+        <th>管理本部使用欄</th>
+        <td>
+          <table align="center" width="100%" border="1" cellspacing="1">
+            <tr>
+              <th rowspan="2">受領日</th>
+              <th colspan="2">注文書</th>
+              <th rowspan="2">備考</th>
+            </tr>
+            <tr>
+              <th>発効日</th>
+              <th>注文NO</th>
+            </tr>
+            <tr>
+              <td><%= f.date_select :general_receipt_date %></br></td>
+              <td><%= f.date_select :general_order_date %></br></td>
+              <td><%= f.number_field :general_order_no %></br></td>
+              <td><textarea rows="2" cols="20"><%= f.text_area :general_other %></textarea></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Back', order_infos_path %>
