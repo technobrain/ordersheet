@@ -236,11 +236,13 @@
     </tr>
     <tr>
       <th>入金サイト</th>
+      <td>
       <select name="payment_site_id">
         <% @payment_site_masters.each do |payment_site| %>
             <option value="<%= payment_site.id %>"><%= payment_site.payment_site_name %></option>
         <%end%>
       </select>
+      </td>
     </tr>
     <tr>
       <th>就業時間</th>
