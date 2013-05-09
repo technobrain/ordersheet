@@ -15,12 +15,14 @@
 
     <!-- ヘッダ部 -->
     <table align="center" width="80%" border="1" cellspacing="1">
+ <!--
       <tr>
         <th width="20%">No</th>
         <td><%= f.number_field :id %></br></td>
         <th width="20%">作業日</th>
         <td></br></td>
       </tr>
+-->
       <tr>
         <th>所属</th>
         <td>
@@ -66,7 +68,7 @@
     <tr>
       <th>案件名</th>
       <td>
-        <select name="company_id">
+        <select name="project_id">
           <% @project_masters.each do |project| %>
               <option value="<%= project.id %>"><%= project.project_name %></option>
           <%end%>
@@ -250,7 +252,7 @@
         <table align="center" width="100%" border="1" cellspacing="1">
           <th>始業</th>
           <td width="30%"><%= f.time_select :work_start_date %></td>
-          <th>就業</th>
+          <th>終業</th>
           <td width="30%"><%= f.time_select :work_end_date %></td>
         </table>
       </td>
@@ -307,7 +309,7 @@
     </tr>
     <tr>
       <th>備考</th>
-      <td><textarea rows="5" cols="20"><%= f.text_area :other %></textarea></td>
+      <td><%= f.text_area :other %></td>
     </tr>
     </table>
     <!-- フッタ部 -->
@@ -329,7 +331,7 @@
               <td><%= f.date_select :general_receipt_date %></br></td>
               <td><%= f.date_select :general_order_date %></br></td>
               <td><%= f.number_field :general_order_no %></br></td>
-              <td><textarea rows="2" cols="20"><%= f.text_area :general_other %></textarea></td>
+              <td><%= f.text_area :general_other %></td>
             </tr>
           </table>
         </td>
