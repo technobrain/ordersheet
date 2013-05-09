@@ -26,7 +26,7 @@
       <tr>
         <th>所属</th>
         <td>
-          <select name="order_infos[unit_id]">
+          <select id="order_infos_unit_id" name="order_infos[unit_id]">
             <% @unit_masters.each do |unit| %>
                 <option value="<%= unit.id %>"><%= unit.unit_name %></option>
             <%end%>
