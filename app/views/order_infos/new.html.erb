@@ -31,6 +31,10 @@
                 <option value="<%= unit.id %>"><%= unit.unit_name %></option>
             <%end%>
           </select>
+          <%= form.select(:unit_id, [
+                  @unit_masters.each do |unit|
+                    unit.unit_name, unit.id]) %>
+          <% end %>
         </td>
         <th>起票者</th>
         <td><%= f.text_field :author %></br></td>
