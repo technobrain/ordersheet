@@ -4,7 +4,7 @@ class OrderChargePeopleController < ApplicationController
   # GET /order_charge_people
   # GET /order_charge_people.json
   def index
-    @order_charge_people = OrderChargePeople.all
+    @order_charge_people = OrderChargePerson.all
   end
 
   # GET /order_charge_people/1
@@ -14,7 +14,7 @@ class OrderChargePeopleController < ApplicationController
 
   # GET /order_charge_people/new
   def new
-    @order_charge_person = OrderChargePeople.new
+    @order_charge_person = OrderChargePerson.new
   end
 
   # GET /order_charge_people/1/edit
@@ -24,7 +24,7 @@ class OrderChargePeopleController < ApplicationController
   # POST /order_charge_people
   # POST /order_charge_people.json
   def create
-    @order_charge_person = OrderChargePeople.new(order_charge_person_params)
+    @order_charge_person = OrderChargePerson.new(order_charge_person_params)
 
     respond_to do |format|
       if @order_charge_person.save
@@ -64,7 +64,7 @@ class OrderChargePeopleController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order_charge_person
-      @order_charge_person = OrderChargePeople.find(params[:id])
+      @order_charge_person = OrderChargePerson.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
