@@ -26,13 +26,6 @@
       <tr>
         <th>所属</th>
         <td>
-          <!--
-          <select id="order_infos_unit_id" name="order_infos[unit_id]">
-            <% @unit_masters.each do |unit| %>
-                <option value="<%= unit.id %>"><%= unit.unit_name %></option>
-            <%end%>
-          </select>
-          -->
           <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
         </td>
         <th>起票者</th>
