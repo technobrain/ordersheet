@@ -84,15 +84,15 @@
             <th>超過単価</th>
           </tr>
           <tr>
-            <% fields_for :order_charge_people do |ocp| %>
+            <% fields_for @order_infos.order_charge_people do |ocp| %>
             <td>
               <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
             </td>
-            <td>ocp.number_field :basic_amount %></td>
-            <td>ocp.number_field :time_limit_lower %></td>
-            <td>ocp.number_field :time_limit_upper %></td>
-            <td>ocp.number_field :deduction_bid %></td>
-            <td>ocp.number_field :overtime_bid %></td>
+            <td><%= ocp.number_field :basic_amount %></td>
+            <td><%= ocp.number_field :time_limit_lower %></td>
+            <td><%= ocp.number_field :time_limit_upper %></td>
+            <td><%= ocp.number_field :deduction_bid %></td>
+            <td><%= ocp.number_field :overtime_bid %></td>
             <% end %>
           </tr>
           <tr>
