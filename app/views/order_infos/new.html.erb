@@ -34,11 +34,7 @@
       <tr>
         <th>売上計上事業部</th>
         <td>
-          <select name="revenue_unit_id">
-            <% @unit_masters.each do |unit| %>
-                <option value="<%= unit.id %>"><%= unit.unit_name %></option>
-            <%end%>
-          </select>
+            <%= f.select :revenue_unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
         </td>
       </tr>
     </table>
@@ -49,11 +45,7 @@
     <tr>
       <th width="20%">企業名</th>
       <td>
-        <select name="company_id">
-          <% @company_masters.each do |company| %>
-              <option value="<%= company.id %>"><%= company.company_name %></option>
-          <%end%>
-        </select>
+        <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]} %>
       </td>
     </tr>
     <tr>
@@ -65,21 +57,14 @@
     <tr>
       <th>案件名</th>
       <td>
-        <select name="project_id">
-          <% @project_masters.each do |project| %>
-              <option value="<%= project.id %>"><%= project.project_name %></option>
-          <%end%>
+        <%= f.select :project_id, @project_masters.all.map{|pj| [pj.project_name, pj.id]} %>
         </select>
       </td>
     </tr>
     <tr>
       <th>業務名</th>
       <td>
-        <select name="business_id">
-          <% @business_masters.each do |business| %>
-              <option value="<%= business.id %>"><%= business.business_name %></option>
-          <%end%>
-        </select>
+        <%= f.select :business_id, @business_masters.all.map{|bs| [bs.business_name, bs.id]} %>
       </td>        </tr>
     </tr>
     <tr>
@@ -236,11 +221,7 @@
     <tr>
       <th>入金サイト</th>
       <td>
-      <select name="payment_site_id">
-        <% @payment_site_masters.each do |payment_site| %>
-            <option value="<%= payment_site.id %>"><%= payment_site.payment_site_name %></option>
-        <%end%>
-      </select>
+        <%= f.select :payment_site_id, @payment_site_masters.all.map{|psm| [psm.payment_site_name, psm.id]} %>
       </td>
     </tr>
     <tr>
