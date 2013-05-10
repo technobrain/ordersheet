@@ -58,7 +58,6 @@
       <th>案件名</th>
       <td>
         <%= f.select :project_id, @project_masters.all.map{|pj| [pj.project_name, pj.id]} %>
-        </select>
       </td>
     </tr>
     <tr>
@@ -85,18 +84,16 @@
             <th>超過単価</th>
           </tr>
           <tr>
+            <% fields_for :order_charge_people do |ocp| %>
             <td>
-              <select name="order_charge_person_employee_01">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
+              <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
             </td>
-            <td><input type="number" name="order_charge_person_basic_amount_01">
-            <td><input type="number" name="order_charge_person_time_limit_lower_01">
-            <td><input type="number" name="order_charge_person_time_limit_upper_01">
-            <td><input type="number" name="order_charge_person_deduction_bid_01">
-            <td><input type="number" name="order_charge_person_overtime_bid_01">
+            <td>ocp.number_field :basic_amount %></td>
+            <td>ocp.number_field :time_limit_lower %></td>
+            <td>ocp.number_field :time_limit_upper %></td>
+            <td>ocp.number_field :deduction_bid %></td>
+            <td>ocp.number_field :overtime_bid %></td>
+            <% end %>
           </tr>
           <tr>
             <td>
