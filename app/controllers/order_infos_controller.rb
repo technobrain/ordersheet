@@ -75,8 +75,8 @@ class OrderInfosController < ApplicationController
 
   def set_order_masters
     @order_infos = OrderInfo.new
-#    @order_infos.order_charge_person.build
-    @order_charge_people = OrderChargePerson.new
+    @order_infos.order_charge_person.build
+#    @order_charge_people = OrderChargePerson.new
     @project_masters = ProjectMaster.all
     @business_masters = BusinessMaster.all
     @company_masters = CompanyMaster.all
