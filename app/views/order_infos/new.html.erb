@@ -84,7 +84,7 @@
             <th>超過単価</th>
           </tr>
           <tr>
-            <% fields_for @order_infos.order_charge_person do |ocp| %>
+            <% fields_for :order_charge_person do |ocp| %>
             <td>
               <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
             </td>
