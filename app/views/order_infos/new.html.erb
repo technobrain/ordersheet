@@ -83,8 +83,8 @@
             <th>控除単価</th>
             <th>超過単価</th>
           </tr>
+          <%= f.fields_for :order_charge_people do |ocp| %>
           <tr>
-            <%= f.fields_for :order_charge_people do |ocp| %>
             <td>
               <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
             </td>
@@ -93,120 +93,8 @@
             <td><%= ocp.number_field :time_limit_upper %></td>
             <td><%= ocp.number_field :deduction_bid %></td>
             <td><%= ocp.number_field :overtime_bid %></td>
-            <% end %>
           </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_02">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_02">
-            <td><input type="number" name="order_charge_person_time_limit_lower_02">
-            <td><input type="number" name="order_charge_person_time_limit_upper_02">
-            <td><input type="number" name="order_charge_person_deduction_bid_02">
-            <td><input type="number" name="order_charge_person_overtime_bid_02">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_03">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_03">
-            <td><input type="number" name="order_charge_person_time_limit_lower_03">
-            <td><input type="number" name="order_charge_person_time_limit_upper_03">
-            <td><input type="number" name="order_charge_person_deduction_bid_03">
-            <td><input type="number" name="order_charge_person_overtime_bid_03">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_04">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_04">
-            <td><input type="number" name="order_charge_person_time_limit_lower_04">
-            <td><input type="number" name="order_charge_person_time_limit_upper_04">
-            <td><input type="number" name="order_charge_person_deduction_bid_04">
-            <td><input type="number" name="order_charge_person_overtime_bid_04">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_05">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_05">
-            <td><input type="number" name="order_charge_person_time_limit_lower_05">
-            <td><input type="number" name="order_charge_person_time_limit_upper_05">
-            <td><input type="number" name="order_charge_person_deduction_bid_05">
-            <td><input type="number" name="order_charge_person_overtime_bid_05">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_06">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_06">
-            <td><input type="number" name="order_charge_person_time_limit_lower_06">
-            <td><input type="number" name="order_charge_person_time_limit_upper_06">
-            <td><input type="number" name="order_charge_person_deduction_bid_06">
-            <td><input type="number" name="order_charge_person_overtime_bid_06">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_07">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_07">
-            <td><input type="number" name="order_charge_person_time_limit_lower_07">
-            <td><input type="number" name="order_charge_person_time_limit_upper_07">
-            <td><input type="number" name="order_charge_person_deduction_bid_07">
-            <td><input type="number" name="order_charge_person_overtime_bid_07">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_08">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_08">
-            <td><input type="number" name="order_charge_person_time_limit_lower_08">
-            <td><input type="number" name="order_charge_person_time_limit_upper_08">
-            <td><input type="number" name="order_charge_person_deduction_bid_08">
-            <td><input type="number" name="order_charge_person_overtime_bid_08">
-          </tr>
-          <tr>
-            <td>
-              <select name="order_charge_person_employee_09">
-                <% @employee_masters.each do |employee| %>
-                    <option value="<%= employee.id %>"><%= employee.employee_name %></option>
-                <%end%>
-              </select>
-            </td>
-            <td><input type="number" name="order_charge_person_basic_amount_09">
-            <td><input type="number" name="order_charge_person_time_limit_lower_09">
-            <td><input type="number" name="order_charge_person_time_limit_upper_09">
-            <td><input type="number" name="order_charge_person_deduction_bid_09">
-            <td><input type="number" name="order_charge_person_overtime_bid_09">
-          </tr>
+          <% end %>
         </table>
         ※金額は税別
       </td>
