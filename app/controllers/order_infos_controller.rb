@@ -75,9 +75,7 @@ class OrderInfosController < ApplicationController
 
   def set_order_masters
     @order_infos = OrderInfo.new
-    9.each do
-      @order_infos.order_charge_people.build
-    end
+    9.times { @order_infos.order_charge_people.build }
 #    @order_charge_people = OrderChargePerson.new
     @project_masters = ProjectMaster.all
     @business_masters = BusinessMaster.all
