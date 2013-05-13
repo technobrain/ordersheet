@@ -69,7 +69,15 @@ class OrderInfosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_info_params
-    params.require(:order_info).permit(:order_id, :company_id, :unit_id, :author, :revenue_unit_id, :project_id, :business_id, :contract_start_date, :contract_end_date, :work_place, :income_date, :payment_site_id, :work_start_date, :work_end_date, :other, :general_receipt_date, :general_order_date, :general_order_no, :general_other, :order_charge_people_attributes => [:employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid])
+    params.require(:order_info).permit(:order_id, :company_id, :unit_id, :author, :revenue_unit_id, :project_id,
+                                       :business_id, :contract_start_date, :contract_end_date, :work_place, :income_date,
+                                       :payment_site_id, :work_start_date, :work_end_date, :other, :general_receipt_date,
+                                       :general_order_date, :general_order_no, :general_other,
+                                       :order_charge_people_attributes => [:employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid],
+                                       :order_break_times_attributes => [:break_start_time, :break_end_time],
+                                       :order_dates_attributes => [:order_date]
+
+    )
  #   params.require(:order_charge_person).permit(:employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid)
   end
 
