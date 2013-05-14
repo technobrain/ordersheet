@@ -1,26 +1,27 @@
-<h1>Listing order_infos</h1>
+<h1>受発注情報一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Company</th>
-      <th>Unit</th>
-      <th>Author</th>
-      <th>Revenue unit</th>
-      <th>Project</th>
-      <th>Business</th>
-      <th>Contract start date</th>
-      <th>Contract end date</th>
-      <th>Work place</th>
-      <th>Income date</th>
-      <th>Payment site</th>
-      <th>Work start date</th>
-      <th>Work end date</th>
-      <th>Other</th>
-      <th>General receipt date</th>
-      <th>General order date</th>
-      <th>General order no</th>
-      <th>General other</th>
+      <th>注文番号</th>
+      <th>取引先会社名</th>
+      <th>所属部署</th>
+      <th>起票者</th>
+      <th>売上計上部門</th>
+      <th>案件名</th>
+      <th>業務内容</th>
+      <th>契約期間（開始）</th>
+      <th>契約期間（終了）</th>
+      <th>作業場所</th>
+      <th>研修日</th>
+      <th>入金サイト</th>
+      <th>作業時間（開始）</th>
+      <th>作業時間（終了）</th>
+      <th>備考</th>
+      <th>管理本部受領日</th>
+      <th>注文書発効日</th>
+      <th>注文ＮＯ</th>
+      <th>管理本部備考</th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,6 +31,7 @@
   <tbody>
     <% @order_infos.each do |order_info| %>
     <tr>
+      <td><%= order_info.id %></td>
       <td><%= order_info.company_id %></td>
       <td><%= order_info.unit_id %></td>
       <td><%= order_info.author %></td>
@@ -48,9 +50,9 @@
       <td><%= order_info.general_order_date %></td>
       <td><%= order_info.general_order_no %></td>
       <td><%= order_info.general_other %></td>
-      <td><%= link_to 'Show', order_info %></td>
-      <td><%= link_to 'Edit', edit_order_info_path(order_info) %></td>
-      <td><%= link_to 'Destroy', order_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '参照', order_info %></td>
+      <td><%= link_to '更新', edit_order_info_path(order_info) %></td>
+      <td><%= link_to '削除', order_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
@@ -58,4 +60,4 @@
 
 <br />
 
-<%= link_to 'New Order info', new_order_info_path %>
+<%= link_to '新規登録', new_order_info_path %>
