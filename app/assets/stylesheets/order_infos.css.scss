@@ -1,3 +1,44 @@
 // Place all the styles related to the order_infos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* --- 表全体 --- */
+table.order_infos {
+  width: 650px; /* 表の幅 */
+  border: 1px #c0c0c0 solid; /* 大枠の境界線 */
+  border-collapse: collapse;
+  font-size: 80%;
+}
+
+/* --- 表タイトル --- */
+table.order_infos caption {
+  padding-bottom: 5px; /* 表タイトルの下パディング */
+}
+
+/* --- セル --- */
+table.order_infos th,
+table.order_infos td {
+  /* width: 20%; */ /* セルの幅（セルの幅を均等にする場合） */
+  padding: 6px 8px; /* セルのパディング（上下、左右） */
+  border: 1px #c0c0c0 solid; /* セルの境界線 */
+}
+
+/* --- 見出しセル --- */
+table.order_infos thead th {
+  background-color: #deefff; /* 見出しセルの背景色 */
+  text-align: center;
+}
+
+/* --- フッタセル --- */
+table.order_infos tfoot td {
+  background-color: #ffffff; /* フッタセルの背景色 */
+}
+
+/* --- 奇数行 --- */
+table.order_infos tr.odd {
+  background-color: #ffffff; /* 奇数行の背景色 */
+}
+
+/* --- 偶数行 --- */
+table.order_infos tr.even {
+  background-color: #f5f5f5; /* 偶数行の背景色 */
+}
