@@ -1,3 +1,4 @@
+<%= link_to 'メニューへ戻る', '/top/index' %>
 <h1>受注情報新規登録</h1>
 
 <%= form_for(@order_infos) do |f| %>
@@ -48,10 +49,12 @@
         <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]} %>
       </td>
     </tr>
+<%- if false -%>
     <tr>
       <th>連絡先</th>
       <td><%= f.text_field :author %></br></td>
     </tr>
+<% end %>
     <td colspan="2">受注案件情報</td>
     </tr>
     <tr>

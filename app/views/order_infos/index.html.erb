@@ -1,5 +1,7 @@
 <h1>受発注情報一覧</h1>
 
+<%= link_to '新規登録', new_order_info_path %>
+<%= link_to 'メニューへ戻る', '/top/index' %>
 <table>
   <thead>
     <tr>
@@ -33,17 +35,17 @@
   　<% css = cycle('even','odd') %>
     <tr class = "order_infos_list <%= css %>">
       <td><%= order_info.id %></td>
-      <td><%= order_info.company_id %></td>
-      <td><%= order_info.unit_id %></td>
+      <td><%= CompanyMaster.find(order_info.company_id).company_name %></td>
+      <td><%= UnitMaster.find(order_info.unit_id).unit_name %></td>
       <td><%= order_info.author %></td>
-      <td><%= order_info.revenue_unit_id %></td>
-      <td><%= order_info.project_id %></td>
-      <td><%= order_info.business_id %></td>
+      <td><%= UnitMaster.find(order_info.revenue_unit_id).unit_name %></td>
+      <td><%= ProjectMaster.find(order_info.project_id).project_name %></td>
+      <td><%= BusinessMaster.find(order_info.business_id).business_name %></td>
       <td><%= order_info.contract_start_date %></td>
       <td><%= order_info.contract_end_date %></td>
       <td><%= order_info.work_place %></td>
       <td><%= order_info.income_date %></td>
-      <td><%= order_info.payment_site_id %></td>
+      <td><%= PaymentSiteMaster.find(order_info.payment_site_id).payment_site_name %></td>
       <td><%= order_info.work_start_date %></td>
       <td><%= order_info.work_end_date %></td>
       <td><%= order_info.other %></td>
@@ -61,4 +63,3 @@
 
 <br />
 
-<%= link_to '新規登録', new_order_info_path %>

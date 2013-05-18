@@ -7,7 +7,7 @@
 <h1>受発注情報管理システム</h1>
 
 <h2>受発注情報管理機能</h2>
-<table align="center" width="50%" border="1" cellspacing="1">
+<table  width="50%" border="1" cellspacing="1">
   <tr>
     <th>
       <%= link_to '受発注情報一覧', '/order_infos#index' %>
@@ -24,11 +24,18 @@
       受注情報を新規に登録します
     </td>
   </tr>
+  <tr>
+    <th>
+      <%= link_to '発注情報登録', '/order_infos#new' %>
+    </th>
+    <td>
+      発注情報を新規に登録します
+    </td>
+  </tr>
 </table>
-発注情報登録<br>
 
 <h2>マスタメンテ機能</h2>
-<table align="center" width="50%" border="1" cellspacing="1">
+<table  width="50%" border="1" cellspacing="1">
   <tr>
     <th>
       <%= link_to '取引先マスタ', '/company_masters#index' %>
