@@ -17,7 +17,7 @@
       <td><%= business_master.business_name %></td>
       <td><%= link_to '参照', business_master %></td>
       <td><%= link_to '更新', edit_business_master_path(business_master) %></td>
-      <td><%= link_to '削除', business_master, method: :delete, data: { confirm: 'よろしいですか?' } %></td>
+      <td><%= link_to '削除', business_master, method: :delete, data: { confirm: '削除してもよろしいですか?' } %></td>
     </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br />
 
-<%= link_to 'New Business master', new_business_master_path %>
+<%= link_to '新規登録', new_business_master_path %>
