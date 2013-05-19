@@ -11,12 +11,14 @@
   <div id="header">
     <%= h yield(:header_image) %>
     <%= h yield(:header_nav_bar) %>
+<%- if false -%>
     <% if user_signed_in? %>
         <%= ' ' << current_user.email << ' ' << (current_user.organization.try(:name) || '') %>
         <%= link_to "Sign-out", destroy_user_session_path, method: :delete %>
     <% else %>
         <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
+    <% end %>i
+<%- end -%>
   </div>
   <div id="content">
     <p id="notice"><%= notice %></p>

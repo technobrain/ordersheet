@@ -1,5 +1,5 @@
-<%= link_to 'メニューへ戻る', '/top/index' %>
-<h1>受注情報新規登録</h1>
+<%= render 'layouts/header' %>
+<h2>受注情報新規登録</h2>
 
 <%= form_for(@order_infos) do |f| %>
     <% if @order_infos.errors.any? %>
