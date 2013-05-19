@@ -1,3 +1,4 @@
+<% content_for :header_nav_bar do %>
     <div id="nav_bar">
       <ul>
         <li><%= link_to 'HOME', root_path %></li>
@@ -6,9 +7,12 @@
         <li><a></a></li>
       </ul>
     </div>
+<% end %>
+<% content_for :header_image do %>
     <div id="header_title">
-      <span>受発注情報管理システム</span>
+      <span>Toki.tb</span>
     </div>
     <div id="header_image">
-    <%= image_tag 'images/logo_tbn.png' %>
+      <%= image_tag 'images/logo_tbn.png' %>
     </div>
+<% end %>

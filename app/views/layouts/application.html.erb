@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ordersheet</title>
+  <title>受発注情報管理</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="container">
+  <div id="header">
+    <%= h yield(:header_image) %>
+    <%= h yield(:header_nav_bar) %>
+    <% if user_signed_in? %>
+        <%= ' ' << current_user.email << ' ' << (current_user.organization.try(:name) || '') %>
+        <%= link_to "Sign-out", destroy_user_session_path, method: :delete %>
+    <% else %>
+        <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+  </div>
+  <div id="content">
+    <p id="notice"><%= notice %></p>
+    <%= yield %>
+  </div>
+  <div id="side_nav">
+    <%= h yield(:side_bar) %>
+  </div>
+  <div id="footer">
+    <%= h yield(:footer) %>
+    <span id="copyright">Copyright &copy; 2013 Technobrain Co.,Ltd. All rights reserved. </span>
+  </div>
+</div>
 </body>
 </html>
