@@ -1,10 +1,11 @@
-<h1>Listing project_masters</h1>
+<%= render '/layouts/header' %>
+<h2>案件マスタ　一覧</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Company</th>
-      <th>Project name</th>
+      <th>取引先会社</th>
+      <th>案件名</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +17,9 @@
     <tr>
       <td><%= project_master.company_id %></td>
       <td><%= project_master.project_name %></td>
-      <td><%= link_to 'Show', project_master %></td>
-      <td><%= link_to 'Edit', edit_project_master_path(project_master) %></td>
-      <td><%= link_to 'Destroy', project_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', project_master %></td>
+      <td><%= link_to '更新', edit_project_master_path(project_master) %></td>
+      <td><%= link_to '削除', project_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>

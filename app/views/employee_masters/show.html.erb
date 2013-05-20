@@ -1,105 +1,107 @@
+<%= render '/layouts/header' %>
+<h2>従業員マスタ　照会</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Employee cd:</strong>
+  <strong>社員番号:</strong>
   <%= @employee_master.employee_cd %>
 </p>
 
 <p>
-  <strong>Employee name:</strong>
+  <strong>氏名（漢字）:</strong>
   <%= @employee_master.employee_name %>
 </p>
 
 <p>
-  <strong>Employee name kana:</strong>
+  <strong>氏名（かな）:</strong>
   <%= @employee_master.employee_name_kana %>
 </p>
 
 <p>
-  <strong>Position:</strong>
+  <strong>職制:</strong>
   <%= @employee_master.position_id %>
 </p>
 
 <p>
-  <strong>Unit:</strong>
+  <strong>部署名:</strong>
   <%= @employee_master.unit_id %>
 </p>
 
 <p>
-  <strong>Email address1:</strong>
+  <strong>eメールアドレス1:</strong>
   <%= @employee_master.email_address1 %>
 </p>
 
 <p>
-  <strong>Emai address2:</strong>
+  <strong>eメールアドレス2:</strong>
   <%= @employee_master.emai_address2 %>
 </p>
 
 <p>
-  <strong>Postal cd:</strong>
+  <strong>郵便番号:</strong>
   <%= @employee_master.postal_cd %>
 </p>
 
 <p>
-  <strong>Address1:</strong>
+  <strong>住所1:</strong>
   <%= @employee_master.address1 %>
 </p>
 
 <p>
-  <strong>Address2:</strong>
+  <strong>住所2:</strong>
   <%= @employee_master.address2 %>
 </p>
 
 <p>
-  <strong>Tel no:</strong>
+  <strong>電話番号:</strong>
   <%= @employee_master.tel_no %>
 </p>
 
 <p>
-  <strong>Fax no:</strong>
+  <strong>FAX番号:</strong>
   <%= @employee_master.fax_no %>
 </p>
 
 <p>
-  <strong>Mobile tel no1:</strong>
+  <strong>携帯1:</strong>
   <%= @employee_master.mobile_tel_no1 %>
 </p>
 
 <p>
-  <strong>Mobile tel no2:</strong>
+  <strong>携帯2:</strong>
   <%= @employee_master.mobile_tel_no2 %>
 </p>
 
 <p>
-  <strong>Emergency tel no:</strong>
+  <strong>緊急連絡先:</strong>
   <%= @employee_master.emergency_tel_no %>
 </p>
 
 <p>
-  <strong>Birth date:</strong>
+  <strong>生年月日:</strong>
   <%= @employee_master.birth_date %>
 </p>
 
 <p>
-  <strong>Station:</strong>
+  <strong>最寄駅:</strong>
   <%= @employee_master.station %>
 </p>
 
 <p>
-  <strong>Birth place:</strong>
+  <strong>出生地:</strong>
   <%= @employee_master.birth_place %>
 </p>
 
 <p>
-  <strong>Education level:</strong>
+  <strong>最終学歴:</strong>
   <%= @employee_master.education_level %>
 </p>
 
 <p>
-  <strong>Other:</strong>
+  <strong>備考:</strong>
   <%= @employee_master.other %>
 </p>
 
 
-<%= link_to 'Edit', edit_employee_master_path(@employee_master) %> |
-<%= link_to 'Back', employee_masters_path %>
+<%= link_to '更新', edit_employee_master_path(@employee_master) %> |
+<%= link_to '戻る', employee_masters_path %>

@@ -1,30 +1,33 @@
+<%= render '/layouts/header' %>
+<h2>取引先マスタ　照会</h2>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Company name:</strong>
+  <strong>取引会社名:</strong>
   <%= @company_master.company_name %>
 </p>
 
 <p>
-  <strong>Division name:</strong>
+  <strong>部署名:</strong>
   <%= @company_master.division_name %>
 </p>
 
 <p>
-  <strong>Charge person:</strong>
+  <strong>担当者名:</strong>
   <%= @company_master.charge_person %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>連絡先:</strong>
   <%= @company_master.contact %>
 </p>
 
 <p>
-  <strong>Tel no:</strong>
+  <strong>連絡先電話番号:</strong>
   <%= @company_master.tel_no %>
 </p>
 
 
-<%= link_to 'Edit', edit_company_master_path(@company_master) %> |
-<%= link_to 'Back', company_masters_path %>
+<%= link_to '更新', edit_company_master_path(@company_master) %> |
+<%= link_to '戻る', company_masters_path %>

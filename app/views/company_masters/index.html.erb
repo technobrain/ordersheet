@@ -1,14 +1,13 @@
-<%= link_to 'メニューへ戻る', '/top/index' %>
-<h1>Listing company_masters</h1>
-
+<%= render '/layouts/header' %>
+<h2>取引先マスタ　一覧</h2>
 <table>
   <thead>
     <tr>
-      <th>Company name</th>
-      <th>Division name</th>
-      <th>Charge person</th>
-      <th>Contact</th>
-      <th>Tel no</th>
+      <th>取引会社名</th>
+      <th>部署名</th>
+      <th>担当者名</th>
+      <th>連絡先</th>
+      <th>連絡先電話番号</th>
       <th></th>
       <th></th>
       <th></th>
@@ -23,9 +22,9 @@
       <td><%= company_master.charge_person %></td>
       <td><%= company_master.contact %></td>
       <td><%= company_master.tel_no %></td>
-      <td><%= link_to 'Show', company_master %></td>
-      <td><%= link_to 'Edit', edit_company_master_path(company_master) %></td>
-      <td><%= link_to 'Destroy', company_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', company_master %></td>
+      <td><%= link_to '更新', edit_company_master_path(company_master) %></td>
+      <td><%= link_to '削除', company_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>

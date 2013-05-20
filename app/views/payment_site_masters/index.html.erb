@@ -1,9 +1,10 @@
-<h1>Listing payment_site_masters</h1>
+<%= render '/layouts/header' %>
+<h2>入金サイトマスタ　一覧</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Payment site name</th>
+      <th>入金サイト名</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +15,9 @@
     <% @payment_site_masters.each do |payment_site_master| %>
     <tr>
       <td><%= payment_site_master.payment_site_name %></td>
-      <td><%= link_to 'Show', payment_site_master %></td>
-      <td><%= link_to 'Edit', edit_payment_site_master_path(payment_site_master) %></td>
-      <td><%= link_to 'Destroy', payment_site_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', payment_site_master %></td>
+      <td><%= link_to '更新', edit_payment_site_master_path(payment_site_master) %></td>
+      <td><%= link_to '削除', payment_site_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>

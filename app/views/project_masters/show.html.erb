@@ -1,15 +1,17 @@
+<%= render '/layouts/header' %>
+<h2>案件マスタ　照会</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Company:</strong>
+  <strong>取引先会社:</strong>
   <%= @project_master.company_id %>
 </p>
 
 <p>
-  <strong>Project name:</strong>
+  <strong>案件名:</strong>
   <%= @project_master.project_name %>
 </p>
 
 
-<%= link_to 'Edit', edit_project_master_path(@project_master) %> |
-<%= link_to 'Back', project_masters_path %>
+<%= link_to '更新', edit_project_master_path(@project_master) %> |
+<%= link_to '戻る', project_masters_path %>

@@ -1,29 +1,29 @@
-<%= link_to 'メニューへ戻る', '/top/index' %>
-<h1>Listing employee_masters</h1>
+<%= render '/layouts/header' %>
+<h2>従業員マスタ　一覧</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Employee cd</th>
-      <th>Employee name</th>
-      <th>Employee name kana</th>
-      <th>Position</th>
-      <th>Unit</th>
-      <th>Email address1</th>
-      <th>Emai address2</th>
-      <th>Postal cd</th>
-      <th>Address1</th>
-      <th>Address2</th>
-      <th>Tel no</th>
-      <th>Fax no</th>
-      <th>Mobile tel no1</th>
-      <th>Mobile tel no2</th>
-      <th>Emergency tel no</th>
-      <th>Birth date</th>
-      <th>Station</th>
-      <th>Birth place</th>
-      <th>Education level</th>
-      <th>Other</th>
+      <th>社員番号</th>
+      <th>氏名（漢字）</th>
+      <th>氏名（かな）</th>
+      <th>職制</th>
+      <th>部署名</th>
+      <th>eメールアドレス1</th>
+      <th>eメールアドレス2</th>
+      <th>郵便番号</th>
+      <th>住所1</th>
+      <th>住所2</th>
+      <th>電話番号</th>
+      <th>FAX番号</th>
+      <th>携帯1</th>
+      <th>携帯2</th>
+      <th>緊急連絡先</th>
+      <th>生年月日</th>
+      <th>最寄駅</th>
+      <th>出生地</th>
+      <th>最終学歴</th>
+      <th>備考</th>
       <th></th>
       <th></th>
       <th></th>
@@ -53,9 +53,9 @@
       <td><%= employee_master.birth_place %></td>
       <td><%= employee_master.education_level %></td>
       <td><%= employee_master.other %></td>
-      <td><%= link_to 'Show', employee_master %></td>
-      <td><%= link_to 'Edit', edit_employee_master_path(employee_master) %></td>
-      <td><%= link_to 'Destroy', employee_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', employee_master %></td>
+      <td><%= link_to '更新', edit_employee_master_path(employee_master) %></td>
+      <td><%= link_to '削除', employee_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>

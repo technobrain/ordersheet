@@ -1,10 +1,11 @@
-<h1>Listing position_masters</h1>
+<%= render '/layouts/header' %>
+<h2>職制マスタ　一覧</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Position name</th>
-      <th>Position expenses</th>
+      <th>職制名称</th>
+      <th>経費</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +17,9 @@
     <tr>
       <td><%= position_master.position_name %></td>
       <td><%= position_master.position_expenses %></td>
-      <td><%= link_to 'Show', position_master %></td>
-      <td><%= link_to 'Edit', edit_position_master_path(position_master) %></td>
-      <td><%= link_to 'Destroy', position_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', position_master %></td>
+      <td><%= link_to '更新', edit_position_master_path(position_master) %></td>
+      <td><%= link_to '削除', position_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>

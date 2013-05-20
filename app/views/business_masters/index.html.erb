@@ -15,9 +15,9 @@
     <% @business_masters.each do |business_master| %>
     <tr>
       <td><%= business_master.business_name %></td>
-      <td><%= link_to '参照', business_master %></td>
+      <td><%= link_to '照会', business_master %></td>
       <td><%= link_to '更新', edit_business_master_path(business_master) %></td>
-      <td><%= link_to '削除', business_master, method: :delete, data: { confirm: '削除してもよろしいですか?' } %></td>
+      <td><%= link_to '削除', business_master, method: :delete, data: { confirm: '削除してよろしいですか?' } %></td>
     </tr>
     <% end %>
   </tbody>
