@@ -1,10 +1,12 @@
+<%= render '/layouts/header' %>
+<h2>部署マスタ　閲覧</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Unit name:</strong>
+  <strong>部署名:</strong>
   <%= @unit_master.unit_name %>
 </p>
 
 
-<%= link_to 'Edit', edit_unit_master_path(@unit_master) %> |
-<%= link_to 'Back', unit_masters_path %>
+<%= link_to '更新', edit_unit_master_path(@unit_master) %> |
+<%= link_to '戻る', unit_masters_path %>

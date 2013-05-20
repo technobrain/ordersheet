@@ -1,9 +1,10 @@
-<h1>Listing unit_masters</h1>
+<%= render '/layouts/header' %>
+<h2>職制マスタ　一覧</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Unit name</th>
+      <th>部署名</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +15,9 @@
     <% @unit_masters.each do |unit_master| %>
     <tr>
       <td><%= unit_master.unit_name %></td>
-      <td><%= link_to 'Show', unit_master %></td>
-      <td><%= link_to 'Edit', edit_unit_master_path(unit_master) %></td>
-      <td><%= link_to 'Destroy', unit_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '照会', unit_master %></td>
+      <td><%= link_to '更新', edit_unit_master_path(unit_master) %></td>
+      <td><%= link_to '削除', unit_master, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
     </tr>
     <% end %>
   </tbody>
