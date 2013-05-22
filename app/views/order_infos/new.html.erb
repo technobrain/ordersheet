@@ -15,7 +15,7 @@
     <% end %>
 
     <!-- ヘッダ部 -->
-    <table align="center" width="80%" border="1" cellspacing="1">
+    <table id="default" width="80%" border="1" cellspacing="1">
  <!--
       <tr>
         <th width="20%">No</th>
@@ -41,8 +41,7 @@
     </table>
     <br>
     <!-- 受注元情報部 -->
-    <table align="center" width="80%" border="1" cellspacing="1">
-    <td colspan="2">受注元企業情報</td>
+    <table id="default" width="80%" border="1" cellspacing="1">
     <tr>
       <th width="20%">企業名</th>
       <td>
@@ -55,7 +54,6 @@
       <td><%= f.text_field :author %></br></td>
     </tr>
 <% end %>
-    <td colspan="2">受注案件情報</td>
     </tr>
     <tr>
       <th>案件名</th>
@@ -77,7 +75,7 @@
     <tr>
       <th>受注案件</th>
       <td>
-        <table align="center" width="100%" border="1" cellspacing="1">
+        <table width="100%" border="1" cellspacing="1">
           <tr>
             <th>作業担当者</th>
             <th>月額基本金額</th>
@@ -115,7 +113,7 @@
     <tr>
       <th>就業時間</th>
       <td>
-        <table align="center" width="100%" border="1" cellspacing="1">
+        <table width="100%" border="1" cellspacing="1">
           <th>始業</th>
           <td width="30%"><%= f.time_select :work_start_date %></td>
           <th>終業</th>
@@ -126,12 +124,12 @@
     <tr>
       <th>休憩時間</th>
       <td>
-        <table align="center" width="100%" border="1" cellspacing="1">
+        <table width="100%" border="1" cellspacing="1">
           <%= f.fields_for :order_break_times do |obt| %>
           <tr>
-            <td align="center" width="10%">①</td>
+            <td width="10%">①</td>
             <td width="30%"><%= obt.time_select :break_start_time %></td>
-            <td align="center" width="10%">～</td>
+            <td width="10%">～</td>
             <td width="30%"><%= obt.time_select :break_end_time %></td>
           </tr>
           <% end %>
@@ -141,12 +139,12 @@
     <tr>
       <th>注文書到着日</th>
       <td>
-        <table align="center" width="100%" border="1" cellspacing="1">
+        <table width="100%" border="1" cellspacing="1">
           <%= f.fields_for :order_dates do |od| %>
           <tr>
-            <td align="center" width="10%">①</td>
+            <td width="10%">①</td>
             <td><%= od.date_select :order_date %></br></td>
-            <td align="center" width="10%">期間</td>
+            <td width="10%">期間</td>
             <td></br></td>
           </tr>
           <% end %>
@@ -160,11 +158,11 @@
     </table>
     <!-- フッタ部 -->
     <br>
-    <table align="center" width="80%" border="1" cellspacing="1">
+    <table id="default" width="80%" border="1" cellspacing="1">
       <tr>
         <th>管理本部使用欄</th>
         <td>
-          <table align="center" width="100%" border="1" cellspacing="1">
+          <table width="100%" border="1" cellspacing="1">
             <tr>
               <th rowspan="2">受領日</th>
               <th colspan="2">注文書</th>
