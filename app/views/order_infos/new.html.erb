@@ -15,7 +15,7 @@
     <% end %>
 
     <!-- ヘッダ部 -->
-    <table id="default" width="80%" border="1" cellspacing="1">
+    <table id="default"  border="1" cellspacing="1">
  <!--
       <tr>
         <th width="20%">No</th>
@@ -41,9 +41,9 @@
     </table>
     <br>
     <!-- 受注元情報部 -->
-    <table id="default" width="80%" border="1" cellspacing="1">
+    <table id="order"  border="1" cellspacing="1">
     <tr>
-      <th width="20%">企業名</th>
+      <th>企業名</th>
       <td>
         <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]} %>
       </td>
@@ -89,11 +89,11 @@
             <td>
               <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
             </td>
-            <td><%= ocp.number_field :basic_amount %></td>
-            <td><%= ocp.number_field :time_limit_lower %></td>
-            <td><%= ocp.number_field :time_limit_upper %></td>
-            <td><%= ocp.number_field :deduction_bid %></td>
-            <td><%= ocp.number_field :overtime_bid %></td>
+            <td><%= ocp.number_field :basic_amount, :in => 1...10000000 %></td>
+            <td><%= ocp.number_field :time_limit_lower , :in => 1...1000 %></td>
+            <td><%= ocp.number_field :time_limit_upper , :in => 1...1000 %></td>
+            <td><%= ocp.number_field :deduction_bid , :in => 1...10000000 %></td>
+            <td><%= ocp.number_field :overtime_bid , :in => 1...10000000 %></td>
           </tr>
           <% end %>
         </table>
@@ -127,10 +127,10 @@
         <table width="100%" border="1" cellspacing="1">
           <%= f.fields_for :order_break_times do |obt| %>
           <tr>
-            <td width="10%">①</td>
-            <td width="30%"><%= obt.time_select :break_start_time %></td>
-            <td width="10%">～</td>
-            <td width="30%"><%= obt.time_select :break_end_time %></td>
+            <th width="5%">①</td>
+            <td width="45%"><%= obt.time_select :break_start_time %></td>
+            <td width="5%">～</td>
+            <td width="45%"><%= obt.time_select :break_end_time %></td>
           </tr>
           <% end %>
         </table>
@@ -142,10 +142,10 @@
         <table width="100%" border="1" cellspacing="1">
           <%= f.fields_for :order_dates do |od| %>
           <tr>
-            <td width="10%">①</td>
-            <td><%= od.date_select :order_date %></br></td>
-            <td width="10%">期間</td>
-            <td></br></td>
+            <th width="5%">①</td>
+            <td width="45%"><%= od.date_select :order_date %></br></td>
+            <th width="10%">期間</td>
+            <td width="40%"></br></td>
           </tr>
           <% end %>
         </table>

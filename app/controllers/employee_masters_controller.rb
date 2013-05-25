@@ -20,6 +20,7 @@ class EmployeeMastersController < ApplicationController
 
   # GET /employee_masters/1/edit
   def edit
+    set_masters;
   end
 
   # POST /employee_masters

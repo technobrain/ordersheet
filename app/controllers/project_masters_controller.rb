@@ -20,6 +20,7 @@ class ProjectMastersController < ApplicationController
 
   # GET /project_masters/1/edit
   def edit
+    set_masters
   end
 
   # POST /project_masters
