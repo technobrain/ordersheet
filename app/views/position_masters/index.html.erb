@@ -4,17 +4,17 @@
 <table id="default">
   <thead>
     <tr>
-      <th>職制/th>
+      <th>職制ID</th>
+      <th>職制名</th>
       <th>経費</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th colspan=3></th>
     </tr>
   </thead>
 
   <tbody>
     <% @position_masters.each do |position_master| %>
     <tr>
+      <td><%= position_master.id %></td>
       <td><%= position_master.position_name %></td>
       <td><%= position_master.position_expenses %></td>
       <td><%= link_to '照会', position_master %></td>
@@ -27,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Position master', new_position_master_path %>
+<%= link_to '新規登録', new_position_master_path %>
