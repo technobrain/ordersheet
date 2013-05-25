@@ -2,7 +2,7 @@
 <h2>案件マスタ　一覧</h2>
 
 <table id="default">
-<%= link_to 'New Project master', new_project_master_path %>
+<%= link_to '新規登録', new_project_master_path %>
 <br />
   <thead>
     <tr>
@@ -16,7 +16,8 @@
   <tbody>
     <% @project_masters.each do |project_master| %>
     <tr>
-      <td><%= project_master.company_id %></td>
+      <td><%= project_master.project_id %></td>
+      <td><%= CompanyMaster.find(project_master.company_id).company_name %></td>
       <td><%= project_master.project_name %></td>
       <td><%= link_to '照会', project_master %></td>
       <td><%= link_to '更新', edit_project_master_path(project_master) %></td>
