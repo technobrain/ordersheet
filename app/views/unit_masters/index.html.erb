@@ -1,9 +1,12 @@
 <%= render '/layouts/header' %>
 <h2>職制マスタ　一覧</h2>
 
+<%= link_to '新規登録', new_unit_master_path %>
+<br />>
 <table id="default">
   <thead>
     <tr>
+      <th>部署ID</th>
       <th>部署名</th>
       <th></th>
       <th></th>
@@ -14,6 +17,7 @@
   <tbody>
     <% @unit_masters.each do |unit_master| %>
     <tr>
+      <td><%= unit_master.id %></td>
       <td><%= unit_master.unit_name %></td>
       <td><%= link_to '照会', unit_master %></td>
       <td><%= link_to '更新', edit_unit_master_path(unit_master) %></td>
@@ -25,4 +29,3 @@
 
 <br />
 
-<%= link_to 'New Unit master', new_unit_master_path %>

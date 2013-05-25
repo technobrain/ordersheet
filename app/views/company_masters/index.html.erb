@@ -1,22 +1,25 @@
 <%= render '/layouts/header' %>
 <h2>取引先マスタ　一覧</h2>
+
+<%= link_to '新規登録', new_company_master_path %>
+<br />>
 <table id="default">
   <thead>
     <tr>
+      <th>取引先会社ID</th>
       <th>取引会社名</th>
       <th>部署名</th>
       <th>担当者名</th>
       <th>連絡先</th>
       <th>連絡先電話番号</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th colspan=3></th>
     </tr>
   </thead>
 
   <tbody>
     <% @company_masters.each do |company_master| %>
     <tr>
+      <td><%= company_master.id %></td>
       <td><%= company_master.company_name %></td>
       <td><%= company_master.division_name %></td>
       <td><%= company_master.charge_person %></td>
@@ -31,5 +34,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Company master', new_company_master_path %>

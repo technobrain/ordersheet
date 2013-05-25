@@ -2,13 +2,14 @@
 <h2>案件マスタ　一覧</h2>
 
 <table id="default">
+<%= link_to 'New Project master', new_project_master_path %>
+<br />
   <thead>
     <tr>
-      <th>取引先会社</th>
+      <th>案件ID</th>
+      <th>取引先会社名</th>
       <th>案件名</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th colspan=3></th>
     </tr>
   </thead>
 
@@ -27,4 +28,3 @@
 
 <br />
 
-<%= link_to 'New Project master', new_project_master_path %>
