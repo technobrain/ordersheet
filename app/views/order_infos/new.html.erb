@@ -27,7 +27,7 @@
       <tr>
         <th>所属</th>
         <td>
-          <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
+          <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]}, :include_blank => true %>
         </td>
         <th>起票者</th>
         <td><%= f.text_field :author %></br></td>
@@ -35,7 +35,7 @@
       <tr>
         <th>売上計上事業部</th>
         <td>
-            <%= f.select :revenue_unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
+            <%= f.select :revenue_unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]}, :include_blank => true %>
         </td>
       </tr>
     </table>
@@ -43,9 +43,9 @@
     <!-- 受注元情報部 -->
     <table id="order"  border="1" cellspacing="1">
     <tr>
-      <th>企業名</th>
+      <th width="15%">企業名</th>
       <td>
-        <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]} %>
+        <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]}, :include_blank => true %>
       </td>
     </tr>
 <%- if false -%>
@@ -58,14 +58,14 @@
     <tr>
       <th>案件名</th>
       <td>
-        <%= f.select :project_id, @project_masters.all.map{|pj| [pj.project_name, pj.id]} %>
+        <%= f.select :project_id, @project_masters.all.map{|pj| [pj.project_name, pj.id]}, :include_blank => true%>
       </td>
     </tr>
     <tr>
       <th>業務名</th>
       <td>
-        <%= f.select :business_id, @business_masters.all.map{|bs| [bs.business_name, bs.id]} %>
-      </td>        </tr>
+        <%= f.select :business_id, @business_masters.all.map{|bs| [bs.business_name, bs.id]}, :include_blank => true %>
+      </td>
     </tr>
     <tr>
       <th>作業場所</th>
@@ -87,7 +87,7 @@
           <%= f.fields_for :order_charge_people do |ocp| %>
           <tr>
             <td>
-              <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]} %>
+              <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
             </td>
             <td><%= ocp.number_field :basic_amount, :in => 1...10000000 %></td>
             <td><%= ocp.number_field :time_limit_lower , :in => 1...1000 %></td>
@@ -102,12 +102,12 @@
     </tr>
     <tr>
       <th>検収日</th>
-      <td><%= f.date_select :income_date %></br></td>
+      <td><%= f.date_select :income_date, :include_blank => true %></br></td>
     </tr>
     <tr>
       <th>入金サイト</th>
       <td>
-        <%= f.select :payment_site_id, @payment_site_masters.all.map{|psm| [psm.payment_site_name, psm.id]} %>
+        <%= f.select :payment_site_id, @payment_site_masters.all.map{|psm| [psm.payment_site_name, psm.id]}, :include_blank => true %>
       </td>
     </tr>
     <tr>
@@ -115,9 +115,9 @@
       <td>
         <table width="100%" border="1" cellspacing="1">
           <th>始業</th>
-          <td width="30%"><%= f.time_select :work_start_date %></td>
+          <td width="30%"><%= f.time_select :work_start_date, :include_blank => true %></td>
           <th>終業</th>
-          <td width="30%"><%= f.time_select :work_end_date %></td>
+          <td width="30%"><%= f.time_select :work_end_date, :include_blank => true %></td>
         </table>
       </td>
     </tr>
@@ -125,12 +125,14 @@
       <th>休憩時間</th>
       <td>
         <table width="100%" border="1" cellspacing="1">
+          <% cnt = 0 %>
           <%= f.fields_for :order_break_times do |obt| %>
+          <% cnt = cnt + 1 %>
           <tr>
-            <th width="5%">①</td>
-            <td width="45%"><%= obt.time_select :break_start_time %></td>
+            <th width="5%"><%= cnt %></td>
+            <td width="45%"><%= obt.time_select :break_start_time, :include_blank => true %></td>
             <td width="5%">～</td>
-            <td width="45%"><%= obt.time_select :break_end_time %></td>
+            <td width="45%"><%= obt.time_select :break_end_time, :include_blank => true %></td>
           </tr>
           <% end %>
         </table>
@@ -140,10 +142,12 @@
       <th>注文書到着日</th>
       <td>
         <table width="100%" border="1" cellspacing="1">
+          <% cnt = 0 %>
           <%= f.fields_for :order_dates do |od| %>
+          <% cnt = cnt + 1 %>
           <tr>
-            <th width="5%">①</td>
-            <td width="45%"><%= od.date_select :order_date %></br></td>
+            <th width="5%"><%= cnt %></td>
+            <td width="45%"><%= od.date_select :order_date, :include_blank => true %></br></td>
             <th width="10%">期間</td>
             <td width="40%"></br></td>
           </tr>
