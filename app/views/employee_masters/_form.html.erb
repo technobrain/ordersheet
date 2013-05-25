@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label "職制" %><br />
-    <%= f.number_field :position_id %>
+    <%= f.select :position_id, @position_masters.all.map{|position| [position.position_name, position.id]} %>
   </div>
   <div class="field">
     <%= f.label "部署名" %><br />
