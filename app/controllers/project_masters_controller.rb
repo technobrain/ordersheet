@@ -15,6 +15,7 @@ class ProjectMastersController < ApplicationController
   # GET /project_masters/new
   def new
     @project_master = ProjectMaster.new
+    set_masters
   end
 
   # GET /project_masters/1/edit
@@ -70,5 +71,8 @@ class ProjectMastersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_master_params
       params.require(:project_master).permit(:company_id, :project_name)
+    end
+    def set_masters
+        @company_masters = CompanyMaster.all
     end
 end

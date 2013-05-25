@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label "取引先会社名" %><br />
-    <%= f.number_field :company_id %>
+    <%= f.select :company_id, @company_masters.all.map{|company| [company.company_name, company.id]} %>
   </div>
   <div class="field">
     <%= f.label "案件名" %><br />

@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label "部署名" %><br />
-    <%= f.number_field :unit_id %>
+    <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
   </div>
   <div class="field">
     <%= f.label "eメールアドレス1" %><br />
