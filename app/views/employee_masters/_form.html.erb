@@ -25,11 +25,11 @@
   </div>
   <div class="field">
     <%= f.label "職制" %><br />
-    <%= f.select :position_id, @position_masters.all.map{|position| [position.position_name, position.id]} %>
+    <%= f.select :position_id, @position_masters.all.map{|position| [position.position_name, position.id]}, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label "部署名" %><br />
-    <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]} %>
+    <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]}, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label "eメールアドレス1" %><br />

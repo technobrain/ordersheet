@@ -33,6 +33,7 @@ class EmployeeMastersController < ApplicationController
         format.html { redirect_to @employee_master, notice: 'Employee master was successfully created.' }
         format.json { render action: 'show', status: :created, location: @employee_master }
       else
+        set_masters;    
         format.html { render action: 'new' }
         format.json { render json: @employee_master.errors, status: :unprocessable_entity }
       end

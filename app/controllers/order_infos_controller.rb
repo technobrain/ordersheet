@@ -14,6 +14,10 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/new
   def new
+    @order_infos = OrderInfo.new
+    9.times { @order_infos.order_charge_people.build }
+    3.times { @order_infos.order_break_times.build }
+    3.times { @order_infos.order_dates.build }
     set_order_masters
   end
 
@@ -31,6 +35,7 @@ class OrderInfosController < ApplicationController
         format.html { redirect_to @order_info, notice: 'Order info was successfully created.' }
         format.json { render action: 'show', status: :created, location: @order_info }
       else
+        set_order_masters
         format.html { render action: 'new' }
         format.json { render json: @order_info.errors, status: :unprocessable_entity }
       end
@@ -45,6 +50,7 @@ class OrderInfosController < ApplicationController
         format.html { redirect_to @order_info, notice: 'Order info was successfully updated.' }
         format.json { head :no_content }
       else
+        set_order_masters
         format.html { render action: 'edit' }
         format.json { render json: @order_info.errors, status: :unprocessable_entity }
       end
@@ -82,11 +88,7 @@ class OrderInfosController < ApplicationController
   end
 
   def set_order_masters
-    @order_infos = OrderInfo.new
-    9.times { @order_infos.order_charge_people.build }
-    3.times { @order_infos.order_break_times.build }
-    3.times { @order_infos.order_dates.build }
-    @project_masters = ProjectMaster.all
+   @project_masters = ProjectMaster.all
     @business_masters = BusinessMaster.all
     @company_masters = CompanyMaster.all
     @employee_masters = EmployeeMaster.all

@@ -6,4 +6,5 @@ class OrderInfo < ActiveRecord::Base
    accepts_nested_attributes_for :order_break_times ,allow_destroy: true
    accepts_nested_attributes_for :order_dates ,allow_destroy: true
 
+#   validates_presence_of :company_id, :message => 'が入力されていません。'
 end
