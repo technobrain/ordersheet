@@ -98,6 +98,10 @@
           </tr>
           <%= f.fields_for :order_charge_people do |ocp| %>
           <tr>
+              <%= render 'order_charge_people', f: ocp %>
+          </tr>
+<%- if false -%>
+          <tr>
             <td>
               <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
             </td>
@@ -107,6 +111,7 @@
             <td><%= ocp.number_field :deduction_bid , :in => 1...10000000 %></td>
             <td><%= ocp.number_field :overtime_bid , :in => 1...10000000 %></td>
           </tr>
+ <%- end -%>
           <% end %>
         </table>
         ※金額は税別
