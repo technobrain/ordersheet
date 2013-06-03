@@ -1,11 +1,11 @@
 <fieldset>
   <td>
-    <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
+    <%= f.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
   </td>
-  <td><%= ocp.number_field :basic_amount, :in => 1...10000000 %></td>
-  <td><%= ocp.number_field :time_limit_lower , :in => 1...1000 %></td>
-  <td><%= ocp.number_field :time_limit_upper , :in => 1...1000 %></td>
-  <td><%= ocp.number_field :deduction_bid , :in => 1...10000000 %></td>
-  <td><%= ocp.number_field :overtime_bid , :in => 1...10000000 %></td>
+  <td><%= f.number_field :basic_amount, :in => 1...10000000 %></td>
+  <td><%= f.number_field :time_limit_lower , :in => 1...1000 %></td>
+  <td><%= f.number_field :time_limit_upper , :in => 1...1000 %></td>
+  <td><%= f.number_field :deduction_bid , :in => 1...10000000 %></td>
+  <td><%= f.number_field :overtime_bid , :in => 1...10000000 %></td>
   <%= link_to "remove", '#', class: "remove_fields" %>
 </fieldset>

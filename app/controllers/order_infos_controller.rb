@@ -16,6 +16,7 @@ class OrderInfosController < ApplicationController
   def new
     @order_infos = OrderInfo.new
   #  9.times { @order_infos.order_charge_people.build }
+    @order_infos.order_charge_people.build
     3.times { @order_infos.order_break_times.build }
     3.times { @order_infos.order_dates.build }
     set_order_masters
