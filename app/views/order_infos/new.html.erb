@@ -100,18 +100,6 @@
           <tr>
               <%= render 'order_charge_person_fields', f: ocp %>
           </tr>
-<%- if false -%>
-          <tr>
-            <td>
-              <%= ocp.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
-            </td>
-            <td><%= ocp.number_field :basic_amount, :in => 1...10000000 %></td>
-            <td><%= ocp.number_field :time_limit_lower , :in => 1...1000 %></td>
-            <td><%= ocp.number_field :time_limit_upper , :in => 1...1000 %></td>
-            <td><%= ocp.number_field :deduction_bid , :in => 1...10000000 %></td>
-            <td><%= ocp.number_field :overtime_bid , :in => 1...10000000 %></td>
-          </tr>
- <%- end -%>
           <% end %>
         </table>
         <%= link_to_add_fields "メンバ追加", f, :order_charge_people %>
