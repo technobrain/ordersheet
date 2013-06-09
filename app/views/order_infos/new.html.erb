@@ -135,6 +135,7 @@
           <%= f.fields_for :order_break_times do |obt| %>
           <% cnt = cnt + 1 %>
           <%= render 'order_break_time_fields', f: obt %>
+          <%= link_to_add_fields "休憩時間追加", f, :order_break_times %></br>
 <%- if false -%>
           <tr>
             <th width="5%"><%= cnt %></td>
@@ -155,6 +156,7 @@
           <%= f.fields_for :order_dates do |od| %>
           <% cnt = cnt + 1 %>
           <%= render 'order_date_fields', f: od %>
+          <%= link_to_add_fields "注文日追加", f, :order_dates %></br>
 <%- if false -%>
           <tr>
             <th width="5%"><%= cnt %></td>
