@@ -83,7 +83,6 @@
       <th>作業場所</th>
       <td><%= f.text_field :work_place %></br></td>
     </tr>
-    </tr>
     <tr>
       <th>受注案件</th>
       <td>
@@ -102,7 +101,7 @@
           </tr>
           <% end %>
         </table>
-        <%= link_to_add_fields "メンバ追加", f, :order_charge_people %></br>
+        <%= link_to_add_fields "メンバ追加", f, :order_charge_people %><br/>
         ※金額は税別
       </td>
     </tr>
