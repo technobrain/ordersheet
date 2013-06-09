@@ -1,10 +1,7 @@
 <fieldset>
-  <tr>
-    <th width="5%"><%= cnt %></td>
-      <td width="45%"><%= f.time_select :break_start_time, :include_blank => true %></td>
-      <td width="5%">～</td>
-      <td width="45%"><%= f.time_select :break_end_time, :include_blank => true %></td>
+     <%= f.time_select :break_start_time, :include_blank => true %>
+      ～
+      <%= f.time_select :break_end_time, :include_blank => true %>
       <%= f.hidden_field :_destroy %>
       <%= button_to "削除", '#', class: "remove_fields" %>
-  </tr>
 </fieldset>

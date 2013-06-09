@@ -1,10 +1,5 @@
 <fieldset>
-  <tr>
-    <th width="5%"><%= cnt %></th>
-      <td width="45%"><%= f.date_select :order_date, :include_blank => true, :use_month_numbers => true %></br></td>
-    <th width="10%">期間</th>
-      <td width="40%"></br></td>
+    <%= f.date_select :order_date, :include_blank => true, :use_month_numbers => true %>
     <%= f.hidden_field :_destroy %>
     <%= button_to "削除", '#', class: "remove_fields" %>
-  </tr>
 </fieldset>
