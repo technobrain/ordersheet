@@ -134,12 +134,15 @@
           <% cnt = 0 %>
           <%= f.fields_for :order_break_times do |obt| %>
           <% cnt = cnt + 1 %>
+          <%= render 'order_break_time_fields', f: obt %>
+<%- if false -%>
           <tr>
             <th width="5%"><%= cnt %></td>
             <td width="45%"><%= obt.time_select :break_start_time, :include_blank => true %></td>
             <td width="5%">～</td>
             <td width="45%"><%= obt.time_select :break_end_time, :include_blank => true %></td>
           </tr>
+<% end %>
           <% end %>
         </table>
       </td>
@@ -151,12 +154,15 @@
           <% cnt = 0 %>
           <%= f.fields_for :order_dates do |od| %>
           <% cnt = cnt + 1 %>
+          <%= render 'order_date_fields', f: od %>
+<%- if false -%>
           <tr>
             <th width="5%"><%= cnt %></td>
             <td width="45%"><%= od.date_select :order_date, :include_blank => true, :use_month_numbers => true %></br></td>
             <th width="10%">期間</td>
             <td width="40%"></br></td>
           </tr>
+<% end %>
           <% end %>
         </table>
       </td>
