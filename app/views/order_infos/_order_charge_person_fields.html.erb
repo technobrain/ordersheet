@@ -8,5 +8,5 @@
   <td><%= f.number_field :deduction_bid , :in => 1...10000000 %></td>
   <td><%= f.number_field :overtime_bid , :in => 1...10000000 %></td>
   <%= f.hidden_field :_destroy %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
+  <%= button_to "削除", '#', class: "remove_fields" %>
 </fieldset>
