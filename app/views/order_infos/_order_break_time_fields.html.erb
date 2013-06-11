@@ -3,5 +3,5 @@
       ～
       <%= f.time_select :break_end_time, :include_blank => true %>
       <%= f.hidden_field :_destroy %>
-      <%= button_to "削除", '#', class: "remove_fields" %>
+      <%= link_to "削除", '#', class: "remove_fields" ,:style=>"color:blue;" %>
 </fieldset>
