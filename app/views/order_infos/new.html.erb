@@ -1,19 +1,6 @@
 <%= render 'layouts/header' %>
 <h2>受注情報新規登録</h2>
 
-<%= form_for(@order_infos) do |f| %>
-    <% if @order_infos.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@order_infos.errors.count, "error") %> prohibited this order_info from being saved:</h2>
-
-          <ul>
-            <% @order_infos.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
     <%= render 'form' %>
 
 
