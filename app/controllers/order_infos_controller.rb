@@ -24,6 +24,7 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/1/edit
   def edit
+    set_order_masters
   end
 
   # POST /order_infos
@@ -89,7 +90,7 @@ class OrderInfosController < ApplicationController
   end
 
   def set_order_masters
-   @project_masters = ProjectMaster.all
+    @project_masters = ProjectMaster.all
     @business_masters = BusinessMaster.all
     @company_masters = CompanyMaster.all
     @employee_masters = EmployeeMaster.all
