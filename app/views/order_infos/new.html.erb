@@ -1,6 +1,194 @@
 <%= render 'layouts/header' %>
 <h2>受注情報新規登録</h2>
 
-<%= render 'form' %>
+<%= form_for(@order_infos) do |f| %>
+    <% if @order_infos.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@order_infos.errors.count, "error") %> prohibited this order_info from being saved:</h2>
+
+          <ul>
+            <% @order_infos.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <!-- ヘッダ部 -->
+    <table id="default"  border="1" cellspacing="1">
+ <!--
+      <tr>
+        <th width="20%">No</th>
+        <td><%= f.number_field :id %></br></td>
+        <th width="20%">作業日</th>
+        <td></br></td>
+      </tr>
+-->
+      <tr>
+        <th>所属</th>
+        <td>
+          <%= f.select :unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]}, :include_blank => true %>
+        </td>
+        <th>起票者</th>
+        <td><%= f.text_field :author %></br></td>
+      </tr>
+      <tr>
+        <th>売上計上事業部</th>
+        <td>
+            <%= f.select :revenue_unit_id, @unit_masters.all.map{|unit| [unit.unit_name, unit.id]}, :include_blank => true %>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <!-- 受注元情報部 -->
+    <table id="order"  border="1" cellspacing="1">
+    <tr>
+      <th width="15%">企業名</th>
+      <td>
+        <%= f.select :company_id, @company_masters.all.map{|cp| [cp.company_name, cp.id]}, :include_blank => true %>
+      </td>
+    </tr>
+<%- if false -%>
+    <tr>
+      <th>連絡先</th>
+      <td><%= f.text_field :author %></br></td>
+    </tr>
+<% end %>
+    </tr>
+    <tr>
+      <th>案件名</th>
+      <td>
+        <%= f.select :project_id, @project_masters.all.map{|pj| [pj.project_name, pj.id]}, :include_blank => true%>
+      </td>
+    </tr>
+    <tr>
+      <th>業務名</th>
+      <td>
+        <%= f.select :business_id, @business_masters.all.map{|bs| [bs.business_name, bs.id]}, :include_blank => true %>
+      </td>
+    </tr>
+     <tr>
+      <th>契約期間</th>
+      <td>
+        <table width="100%" border="1" cellspacing="1">
+          <tr>
+            <td width="45%"><%= f.date_select :work_start_date, :include_blank => true, :use_month_numbers => true %></td>
+            <td width="5%">～</td>
+            <td width="45%"><%= f.date_select :work_end_date, :include_blank => true, :use_month_numbers => true %></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>作業場所</th>
+      <td><%= f.text_field :work_place %></br></td>
+    </tr>
+    <tr>
+      <th>受注案件</th>
+      <td>
+        <table width="100%" border="1" cellspacing="1">
+          <tr>
+            <th>作業担当者</th>
+            <th>月額基本金額</th>
+            <th>月額稼働時間（上限）</th>
+            <th>月額稼働時間（下限）</th>
+            <th>控除単価</th>
+            <th>超過単価</th>
+          </tr>
+          <%= f.fields_for :order_charge_people do |ocp| %>
+          <tr>
+              <%= render 'order_charge_person_fields', f: ocp %>
+          </tr>
+          <% end %>
+        </table>
+        <%= link_to_add_fields "メンバ追加", f, :order_charge_people %><br/>
+      </td>
+    </tr>
+    <tr>
+      <th>検収日</th>
+      <td><%= f.date_select :income_date, :include_blank => true, :use_month_numbers => true %></br></td>
+    </tr>
+    <tr>
+      <th>入金サイト</th>
+      <td>
+        <%= f.select :payment_site_id, @payment_site_masters.all.map{|psm| [psm.payment_site_name, psm.id]}, :include_blank => true %>
+      </td>
+    </tr>
+    <tr>
+      <th>就業時間</th>
+      <td>
+        <table width="100%" border="1" cellspacing="1">
+          <th>始業</th>
+          <td width="30%"><%= f.time_select :work_start_date, :include_blank => true %></td>
+          <th>終業</th>
+          <td width="30%"><%= f.time_select :work_end_date, :include_blank => true %></td>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th>休憩時間</th>
+      <td>
+        <table width="100%" border="1" cellspacing="1">
+          <th>開始時刻～終了時刻</th>
+          <%= f.fields_for :order_break_times do |obt| %>
+          <td>
+            <%= render 'order_break_time_fields', f: obt %>
+          </td>
+          <% end %>
+        </table>
+        <%= link_to_add_fields "追加", f, :order_break_times %></br>
+      </td>
+    </tr>
+    <tr>
+      <th>注文書到着日</th>
+      <td>
+        <table width="100%" border="1" cellspacing="1">
+          <th>年月日</th>
+          <%= f.fields_for :order_dates do |od| %>
+          <td>
+            <%= render 'order_date_fields', f: od %>
+          </td>
+          <% end %>
+        </table>
+        <%= link_to_add_fields "追加", f, :order_dates %></br>
+      </td>
+    </tr>
+    <tr>
+      <th>備考</th>
+      <td><%= f.text_area :other %></td>
+    </tr>
+    </table>
+    <!-- フッタ部 -->
+    <br>
+    <table id="default" width="80%" border="1" cellspacing="1">
+      <tr>
+        <th>管理本部使用欄</th>
+        <td>
+          <table width="100%" border="1" cellspacing="1">
+            <tr>
+              <th rowspan="2">受領日</th>
+              <th colspan="2">注文書</th>
+              <th rowspan="2">備考</th>
+            </tr>
+            <tr>
+              <th>発効日</th>
+              <th>注文NO</th>
+            </tr>
+            <tr>
+              <td><%= f.date_select :general_receipt_date, :use_month_numbers => true %></br></td>
+              <td><%= f.date_select :general_order_date , :use_month_numbers => true %></br></td>
+              <td><%= f.number_field :general_order_no %></br></td>
+              <td><%= f.text_area :general_other %></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <div class="actions">
+      <%= f.submit("登録") %>
+    </div>
+<% end %>
+
 
 <%= link_to '戻る', order_infos_path %>
