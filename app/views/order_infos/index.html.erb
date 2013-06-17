@@ -30,7 +30,7 @@
   </thead>
 
   <tbody>
-    <% @order_infos.each do |order_info| %>
+    <% @order_info.each do |order_info| %>
   　<% css = cycle('even','odd') %>
     <tr class = "order_infos_list <%= css %>">
       <td><%= order_info.id %></td>
