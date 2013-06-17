@@ -4,7 +4,7 @@ class OrderInfosController < ApplicationController
   # GET /order_infos
   # GET /order_infos.json
   def index
-    @order_infos = OrderInfo.all
+    @order_info = OrderInfo.all
   end
 
   # GET /order_infos/1
@@ -14,7 +14,7 @@ class OrderInfosController < ApplicationController
 
   # GET /order_infos/new
   def new
-    @order_infos = OrderInfo.new
+    @order_info = OrderInfo.new
   #  9.times { @order_infos.order_charge_people.build }
   #  @order_infos.order_charge_people.build
  #   3.times { @order_infos.order_break_times.build }
