@@ -48,7 +48,7 @@ class OrderInfosController < ApplicationController
   # PATCH/PUT /order_infos/1.json
   def update
     respond_to do |format|
-      if @order_info.update(order_info_params)
+      if @order_info.update_attributes(params[:order_info_params])
         format.html { redirect_to @order_info, notice: 'Order info was successfully updated.' }
         format.json { head :no_content }
       else
