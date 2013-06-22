@@ -48,7 +48,7 @@ class OrderInfosController < ApplicationController
   # PATCH/PUT /order_infos/1.json
   def update
     respond_to do |format|
-      if @order_info.update_attributes(params[:order_info_params])
+      if @order_info.update_attributes(order_info_params)
         format.html { redirect_to @order_info, notice: 'Order info was successfully updated.' }
         format.json { head :no_content }
       else
@@ -81,9 +81,9 @@ class OrderInfosController < ApplicationController
                                        :business_id, :contract_start_date, :contract_end_date, :work_place, :income_date,
                                        :payment_site_id, :work_start_date, :work_end_date, :other, :general_receipt_date,
                                        :general_order_date, :general_order_no, :general_other,
-                                       :order_charge_people_attributes => [:employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid],
-                                       :order_break_times_attributes => [:break_start_time, :break_end_time],
-                                       :order_dates_attributes => [:order_date]
+                                       :order_charge_people_attributes => [:id, :employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid, :_destroy],
+                                       :order_break_times_attributes => [:id, :break_start_time, :break_end_time, :_destroy],
+                                       :order_dates_attributes => [:id, :order_date, :_destroy]
 
     )
  #   params.require(:order_charge_person).permit(:employee_id, :basic_amount, :time_limit_lower, :time_limit_upper, :deduction_bid, :overtime_bid)
