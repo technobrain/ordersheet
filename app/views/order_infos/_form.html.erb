@@ -69,7 +69,7 @@
         <td>
           <table width="100%" border="1" cellspacing="1">
             <tr>
-              <td width="45%"><%= f.date_select :contract_start_date, :include_blank => true, :use_month_numbers => true %></td>
+              <td width="45%"><%= f.date_field :contract_start_date, :include_blank => true, :use_month_numbers => true %></td>
               <td width="5%">～</td>
               <td width="45%"><%= f.date_select :contract_end_date, :include_blank => true, :use_month_numbers => true %></td>
             </tr>
@@ -143,13 +143,15 @@
             <tr>
                 <th>年月日</th>
             </tr>
-            <%= f.fields_for :order_dates do |od| %>
             <tr>
+            <td>
+            <%= f.fields_for :order_dates do |od| %>
                 <%= render 'order_date_fields', f: od %>
-            </tr>
             <% end %>
+            </td>
+            </tr>
+          <tr><td><%= link_to_add_fields "追加", f, :order_dates %></br></td></tr>
           </table>
-          <%= link_to_add_fields "追加", f, :order_dates %></br>
         </td>
       </tr>
       <tr>
