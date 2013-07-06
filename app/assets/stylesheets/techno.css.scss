@@ -118,7 +118,7 @@ body {
   }
 }
 
-#content, .modal {
+#content {
 //  width:  700px;
   width: 100%;
   //min-width:  700px;
@@ -130,7 +130,7 @@ body {
   a {
     display: block;
     text-decoration: none;
-    float:  left;
+    //float:  left;
 
     &.button {
       background-color: steelblue;
@@ -151,7 +151,7 @@ body {
       height: 20px;
       padding: 10px 5px;
       margin-right: 5px;
-      float:  right;
+      //float:  right;
 
       &:hover {
         background: orange;
