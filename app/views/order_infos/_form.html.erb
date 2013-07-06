@@ -128,9 +128,9 @@
           <table width="100%" border="1" cellspacing="1">
             <th>開始時刻～終了時刻</th>
             <%= f.fields_for :order_break_times do |obt| %>
-                <td>
+                <tr>
                   <%= render 'order_break_time_fields', f: obt %>
-                </td>
+                </tr>
             <% end %>
           </table>
           <%= link_to_add_fields "追加", f, :order_break_times %></br>
@@ -140,11 +140,13 @@
         <th>注文書到着日</th>
         <td>
           <table width="100%" border="1" cellspacing="1">
-            <th>年月日</th>
+            <tr>
+                <th>年月日</th>
+            </tr>
             <%= f.fields_for :order_dates do |od| %>
-                <td>
-                  <%= render 'order_date_fields', f: od %>
-                </td>
+            <tr>
+                <%= render 'order_date_fields', f: od %>
+            </tr>
             <% end %>
           </table>
           <%= link_to_add_fields "追加", f, :order_dates %></br>
