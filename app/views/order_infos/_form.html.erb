@@ -71,7 +71,7 @@
             <tr>
               <td width="45%"><%= f.date_field :contract_start_date, :include_blank => true, :use_month_numbers => true %></td>
               <td width="5%">～</td>
-              <td width="45%"><%= f.date_select :contract_end_date, :include_blank => true, :use_month_numbers => true %></td>
+              <td width="45%"><%= f.date_field :contract_end_date, :include_blank => true, :use_month_numbers => true %></td>
             </tr>
           </table>
         </td>
@@ -85,18 +85,15 @@
         <td>
           <table width="100%" border="1" cellspacing="1">
             <tr>
-              <th>作業担当者</th>
-              <th>月額基本金額</th>
-              <th>月額稼働時間（上限）</th>
-              <th>月額稼働時間（下限）</th>
-              <th>控除単価</th>
-              <th>超過単価</th>
+              <th>作業担当者, 月額基本金額, 月額稼働時間(上限), 月額稼働時間(下限), 控除単価, 超過単価</th>
             </tr>
+            <tr>
+            <td>
             <%= f.fields_for :order_charge_people do |ocp| %>
-                <tr>
                   <%= render 'order_charge_person_fields', f: ocp %>
-                </tr>
             <% end %>
+            </td>
+            </tr>
             <tr>
               <td><%= link_to_add_fields "メンバ追加", f, :order_charge_people %><br/></td>
             </tr>
@@ -105,7 +102,7 @@
       </tr>
       <tr>
         <th>検収日</th>
-        <td><%= f.date_select :income_date, :include_blank => true, :use_month_numbers => true %></br></td>
+        <td><%= f.date_field :income_date, :include_blank => true, :use_month_numbers => true %></br></td>
       </tr>
       <tr>
         <th>入金サイト</th>
@@ -184,8 +181,8 @@
               <th>注文NO</th>
             </tr>
             <tr>
-              <td><%= f.date_select :general_receipt_date, :use_month_numbers => true %></br></td>
-              <td><%= f.date_select :general_order_date , :use_month_numbers => true %></br></td>
+              <td><%= f.date_field :general_receipt_date, :use_month_numbers => true %></br></td>
+              <td><%= f.date_field :general_order_date , :use_month_numbers => true %></br></td>
               <td><%= f.number_field :general_order_no %></br></td>
               <td><%= f.text_area :general_other %></td>
             </tr>
