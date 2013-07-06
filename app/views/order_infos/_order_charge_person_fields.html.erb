@@ -1,6 +1,6 @@
 <fieldset>
-    <%= f.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>>
-    <%= f.number_field :basic_amount, :in => 1...10000000 %>>
+    <%= f.select :employee_id, @employee_masters.all.map{|emp| [emp.employee_name, emp.id]}, :include_blank => true %>
+    <%= f.number_field :basic_amount, :in => 1...10000000 %>
     <%= f.number_field :time_limit_lower , :in => 1...1000 %>
     <%= f.number_field :time_limit_upper , :in => 1...1000 %>
     <%= f.number_field :deduction_bid , :in => 1...10000000 %>
