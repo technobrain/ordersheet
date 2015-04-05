@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130510174325) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "business_masters", force: true do |t|
     t.string   "business_name"
     t.datetime "created_at"
