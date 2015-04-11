@@ -5,6 +5,8 @@ class EmployeeMastersController < ApplicationController
   # GET /employee_masters.json
   def index
     @employee_masters = EmployeeMaster.all
+    byebug
+    @employee_masters
   end
 
   # GET /employee_masters/1
@@ -30,11 +32,11 @@ class EmployeeMastersController < ApplicationController
 
     respond_to do |format|
       if @employee_master.save
-        format.html { redirect_to @employee_master, notice: 'Employee master was successfully created.' }
+        format.html { redirect_to @employee_master, notice: '社員情報が作成されました' }
         format.json { render action: 'show', status: :created, location: @employee_master }
       else
-        set_masters;    
-        format.html { render action: 'new' }
+        set_masters;
+        format.html { render 'new' }
         format.json { render json: @employee_master.errors, status: :unprocessable_entity }
       end
     end
@@ -45,10 +47,10 @@ class EmployeeMastersController < ApplicationController
   def update
     respond_to do |format|
       if @employee_master.update(employee_master_params)
-        format.html { redirect_to @employee_master, notice: 'Employee master was successfully updated.' }
+        format.html { redirect_to @employee_master, notice: '社員情報が更新されました' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @employee_master.errors, status: :unprocessable_entity }
       end
     end

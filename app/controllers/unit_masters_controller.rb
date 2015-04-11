@@ -29,9 +29,9 @@ class UnitMastersController < ApplicationController
     respond_to do |format|
       if @unit_master.save
         format.html { redirect_to @unit_master, notice: 'Unit master was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @unit_master }
+        format.json { render 'show', status: :created, location: @unit_master }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @unit_master.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class UnitMastersController < ApplicationController
         format.html { redirect_to @unit_master, notice: 'Unit master was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @unit_master.errors, status: :unprocessable_entity }
       end
     end

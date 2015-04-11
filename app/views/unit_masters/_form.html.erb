@@ -1,10 +1,10 @@
-<%= form_for(@unit_master) do |f| %>
-  <% if @unit_master.errors.any? %>
+<%= form_for(unit_master) do |f| %>
+  <% if unit_master.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@unit_master.errors.count, "error") %> prohibited this unit_master from being saved:</h2>
+      <h2><%= pluralize(unit_master.errors.count, "error") %> prohibited this unit_master from being saved:</h2>
 
       <ul>
-      <% @unit_master.errors.full_messages.each do |msg| %>
+      <% unit_master.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

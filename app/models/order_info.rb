@@ -15,4 +15,9 @@ class OrderInfo < ActiveRecord::Base
                           "business_id" => "業務名"}
 
    validates_presence_of :company_id, :unit_id, :revenue_unit_id, :project_id, :business_id, :contract_start_date, :contract_end_date, :income_date, :payment_site_id, :work_start_date, :work_end_date, :message => 'が入力されていません。'
+
+  belongs_to :project_master, foreign_key: :project_id
+  belongs_to :company_master, foreign_key: :company_id
+  belongs_to :unit_master, foreign_key: :revenue_unit_id
+  belongs_to :business_master, foreign_key: :business_id
 end

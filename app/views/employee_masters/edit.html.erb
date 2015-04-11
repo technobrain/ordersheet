@@ -1,7 +1,8 @@
 <%= render '/layouts/header' %>
 <h2>従業員マスタ　更新</h2>
 
-<%= render 'form' %>
+<%= render 'form', { employee_master: @employee_master, position_masters: @position_masters,
+                     unit_masters: @unit_masters } %>
 
 <%= link_to '照会', @employee_master %> |
 <%= link_to '戻る', employee_masters_path %>

@@ -31,9 +31,9 @@ class ProjectMastersController < ApplicationController
     respond_to do |format|
       if @project_master.save
         format.html { redirect_to @project_master, notice: 'Project master was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @project_master }
+        format.json { render 'show', status: :created, location: @project_master }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @project_master.errors, status: :unprocessable_entity }
       end
     end
@@ -47,7 +47,7 @@ class ProjectMastersController < ApplicationController
         format.html { redirect_to @project_master, notice: 'Project master was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @project_master.errors, status: :unprocessable_entity }
       end
     end

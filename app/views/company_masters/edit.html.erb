@@ -1,7 +1,7 @@
 <%= render '/layouts/header' %>
 <h2>取引先マスタ 更新</h2>
 
-<%= render 'form' %>
+<%= render 'form', company_master: @company_master %>
 
 <%= link_to '照会', @company_master %> |
 <%= link_to '戻る', company_masters_path %>

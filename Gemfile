@@ -39,3 +39,21 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'execjs'
 gem 'therubyracer'
 
+group :development do
+  gem 'spring-commands-rspec'
+
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  gem 'rack-mini-profiler'
+  gem 'bullet'
+  gem 'quiet_assets'
+  gem 'rails_best_practices'
+  gem 'did_you_mean'
+  gem 'annotate'
+end

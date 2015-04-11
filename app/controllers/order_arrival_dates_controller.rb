@@ -29,9 +29,9 @@ class OrderArrivalDatesController < ApplicationController
     respond_to do |format|
       if @order_arrival_date.save
         format.html { redirect_to @order_arrival_date, notice: 'Order arrival date was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @order_arrival_date }
+        format.json { render 'show', status: :created, location: @order_arrival_date }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @order_arrival_date.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class OrderArrivalDatesController < ApplicationController
         format.html { redirect_to @order_arrival_date, notice: 'Order arrival date was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @order_arrival_date.errors, status: :unprocessable_entity }
       end
     end

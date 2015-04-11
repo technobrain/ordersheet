@@ -1,7 +1,7 @@
 <%= render 'layouts/header' %>
 <h2>受注情報更新</h2>
 
-<%= render 'form' %>
+<%= render 'form', order_info: @order_info %>
 
 <%= link_to '参照', @order_info %> |
 <%= link_to '戻る', order_infos_path %>

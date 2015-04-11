@@ -29,9 +29,9 @@ class OrderChargePeopleController < ApplicationController
     respond_to do |format|
       if @order_charge_person.save
         format.html { redirect_to @order_charge_person, notice: 'Order charge person was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @order_charge_person }
+        format.json { render 'show', status: :created, location: @order_charge_person }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @order_charge_person.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class OrderChargePeopleController < ApplicationController
         format.html { redirect_to @order_charge_person, notice: 'Order charge person was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @order_charge_person.errors, status: :unprocessable_entity }
       end
     end

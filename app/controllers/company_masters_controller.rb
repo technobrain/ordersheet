@@ -29,9 +29,9 @@ class CompanyMastersController < ApplicationController
     respond_to do |format|
       if @company_master.save
         format.html { redirect_to @company_master, notice: 'Company master was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @company_master }
+        format.json { render 'show', status: :created, location: @company_master }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @company_master.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class CompanyMastersController < ApplicationController
         format.html { redirect_to @company_master, notice: 'Company master was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @company_master.errors, status: :unprocessable_entity }
       end
     end

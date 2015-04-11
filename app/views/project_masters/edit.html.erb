@@ -1,6 +1,6 @@
 <%= render '/layouts/header' %>
 <h2>案件マスタ　更新</h2>
-<%= render 'form' %>
+<%= render 'form', { project_master: @project_master, company_masters: @company_masters } %>
 
 <%= link_to '照会', @project_master %> |
 <%= link_to '戻る', project_masters_path %>

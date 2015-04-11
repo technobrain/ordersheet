@@ -29,9 +29,9 @@ class PositionMastersController < ApplicationController
     respond_to do |format|
       if @position_master.save
         format.html { redirect_to @position_master, notice: 'Position master was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @position_master }
+        format.json { render 'show', status: :created, location: @position_master }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @position_master.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class PositionMastersController < ApplicationController
         format.html { redirect_to @position_master, notice: 'Position master was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @position_master.errors, status: :unprocessable_entity }
       end
     end

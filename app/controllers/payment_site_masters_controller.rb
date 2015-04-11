@@ -19,6 +19,7 @@ class PaymentSiteMastersController < ApplicationController
 
   # GET /payment_site_masters/1/edit
   def edit
+
   end
 
   # POST /payment_site_masters
@@ -29,9 +30,9 @@ class PaymentSiteMastersController < ApplicationController
     respond_to do |format|
       if @payment_site_master.save
         format.html { redirect_to @payment_site_master, notice: 'Payment site master was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @payment_site_master }
+        format.json { render 'show', status: :created, location: @payment_site_master }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @payment_site_master.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +46,7 @@ class PaymentSiteMastersController < ApplicationController
         format.html { redirect_to @payment_site_master, notice: 'Payment site master was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @payment_site_master.errors, status: :unprocessable_entity }
       end
     end

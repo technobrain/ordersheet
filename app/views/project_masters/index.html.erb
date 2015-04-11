@@ -17,7 +17,7 @@
     <% @project_masters.each do |project_master| %>
     <tr>
       <td><%= project_master.id %></td>
-      <td><%= CompanyMaster.find(project_master.company_id).company_name %></td>
+      <td><%= project_master.company_master.company_name %></td>
       <td><%= project_master.project_name %></td>
       <td><%= link_to '照会', project_master %></td>
       <td><%= link_to '更新', edit_project_master_path(project_master) %></td>

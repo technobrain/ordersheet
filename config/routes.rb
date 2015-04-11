@@ -23,9 +23,6 @@ Ordersheet::Application.routes.draw do
   resources :company_masters
 
   resources :employee_masters
-
-  resources :ordersheetrails
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,9 +1,8 @@
 <%= render '/layouts/header' %>
 <h2>業務マスタ　照会</h2>
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>業務名</strong>
   <%= @business_master.business_name %>
 </p>
 <%= link_to '更新', edit_business_master_path(@business_master) %> |
+<%= link_to '戻る', business_masters_path %>

@@ -32,10 +32,10 @@ class OrderInfosController < ApplicationController
     respond_to do |format|
       if @order_info.save
         format.html { redirect_to @order_info, notice: 'Order info was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @order_info }
+        format.json { render 'show', status: :created, location: @order_info }
       else
         set_order_masters
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @order_info.errors, status: :unprocessable_entity }
       end
     end
@@ -50,7 +50,7 @@ class OrderInfosController < ApplicationController
         format.json { head :no_content }
       else
         set_order_masters
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @order_info.errors, status: :unprocessable_entity }
       end
     end

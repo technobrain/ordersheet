@@ -1,5 +1,6 @@
 <%= render '/layouts/header' %>
 <h2>業務マスタ　新規登録</h2>
 
-<%= render 'form' %>
-
+# 子供のパーツではインスタンス変数を使わないようにしたほうが再利用しやすくなる
+# そのため、@business_masterをbusiness_masterとして渡している
+<%= render 'form', business_master: @business_master %>
